@@ -1,0 +1,79 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button [routerLink]="['/new-task']">
+        <ion-icon slot="icon-only" name="create"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Inicio</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<!-- <ion-content *ngIf="items" class="list-mini-content" no-padding>
+  <ion-row no-padding>
+    <ion-col size-xl="4" offset-xl="4" size-lg="6" offset-lg="3" size-md="10" offset-md="1" size-sm="12" no-padding>
+      <div *ngIf="items.length > 0" class="list-mini" no-padding>
+          <ion-card *ngFor="let item of items" no-padding>
+              <ion-item lines="none">
+                  <ion-avatar slot="start">
+                    <img src="../../../assets/imgs/perfil.jpg">
+                  </ion-avatar>
+                  <ion-label>Mauricio Garduño</ion-label>
+                  <ion-note>11h ago</ion-note>
+                  <ion-button fill="clear"><ion-icon name="more"></ion-icon></ion-button>
+              </ion-item>
+              <img [src]="item.payload.doc.data().image">
+              <ion-card-content>
+                  <p>{{item.payload.doc.data().description}}</p>
+                  <ion-col>
+                      <ion-button fill="clear" size="small" [routerLink]="['/details', item.payload.doc.id]">...Ver más</ion-button>
+                  </ion-col>
+              </ion-card-content>
+              
+                <ion-row text-center>
+                  <ion-col>
+                    <ion-button fill="clear" size="small"><ion-icon name="thumbs-up"></ion-icon>Me gusta</ion-button>
+                  </ion-col>
+                  <ion-col>
+                    <ion-button fill="clear" size="small"><ion-icon name="text"></ion-icon>Comentar</ion-button>
+                  </ion-col>
+                  <ion-col>
+                      <ion-button fill="clear" size="small"><ion-icon name="ios-redo"></ion-icon>Compartir</ion-button>
+                  </ion-col>
+                </ion-row>
+            </ion-card>
+      </div>
+      <div *ngIf="items.length == 0" class="empty-list">
+        No has publicado nada aún.
+      </div>
+    </ion-col>
+  </ion-row>
+</ion-content> -->
+
+<ion-content *ngIf="items" class="list-mini-content" no-padding>
+    <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+        <ion-refresher-content
+          pullingIcon="arrow-dropdown"
+          pullingText="Pull to refresh"
+          refreshingSpinner="circles"
+          refreshingText="Refreshing...">
+        </ion-refresher-content>
+      </ion-refresher>
+  <div *ngIf="items.length > 0" class="list-mini">
+    <ion-card>
+      <ion-item *ngFor="let item of items" [routerLink]="['/details', item.payload.doc.id]" class="animated bounceInRight">
+        <ion-thumbnail slot="start">
+          <img [src]="item.payload.doc.data().image">
+        </ion-thumbnail>
+        <ion-label>{{item.payload.doc.data().title}}</ion-label>
+        <ion-button fill="clear" slot="end">Detalles</ion-button>
+      </ion-item>
+    </ion-card>
+  </div>
+  <div *ngIf="items.length == 0" class="empty-list">
+    Ingresa un nuevo alimento.
+  </div>
+</ion-content>

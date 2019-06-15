@@ -1,0 +1,61 @@
+{
+  "_args": [
+    [
+      "cordova-plugin-telerik-imagepicker@2.2.4",
+      "/Users/mauricio/Downloads/ionic-firebase-starter-app-master"
+    ]
+  ],
+  "_from": "cordova-plugin-telerik-imagepicker@2.2.4",
+  "_id": "cordova-plugin-telerik-imagepicker@2.2.4",
+  "_inBundle": false,
+  "_integrity": "sha512-H3OfgzoLuF6BGOwBVFeXCDQ7N8Y1Q7gE3jRC/pAVLuizSBgpN2Z8Dx+0PQBkg9m5/9qkz0SOgwZqtA7N6VWMGw==",
+  "_location": "/cordova-plugin-telerik-imagepicker",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "cordova-plugin-telerik-imagepicker@2.2.4",
+    "name": "cordova-plugin-telerik-imagepicker",
+    "escapedName": "cordova-plugin-telerik-imagepicker",
+    "rawSpec": "2.2.4",
+    "saveSpec": null,
+    "fetchSpec": "2.2.4"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/cordova-plugin-telerik-imagepicker/-/cordova-plugin-telerik-imagepicker-2.2.4.tgz",
+  "_spec": "2.2.4",
+  "_where": "/Users/mauricio/Downloads/ionic-firebase-starter-app-master",
+  "bugs": {
+    "url": "https://github.com/Telerik-Verified-Plugins/ImagePicker/issues"
+  },
+  "cordova": {
+    "id": "cordova-plugin-telerik-imagepicker",
+    "platforms": [
+      "ios",
+      "android",
+      "wp8"
+    ]
+  },
+  "cordova_name": "ImagePicker",
+  "description": "This plugin allows selection of multiple images from the camera roll / gallery in a phonegap app",
+  "engines": {
+    "name": "cordova",
+    "version": ">=3.5.0"
+  },
+  "homepage": "https://github.com/Telerik-Verified-Plugins/ImagePicker#readme",
+  "issue": "",
+  "keywords": [],
+  "license": "MIT",
+  "name": "cordova-plugin-telerik-imagepicker",
+  "platforms": [
+    "android",
+    "ios"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Telerik-Verified-Plugins/ImagePicker.git"
+  },
+  "version": "2.2.4"
+}

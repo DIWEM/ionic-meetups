@@ -1,0 +1,42 @@
+// http://ionicframework.com/docs/theming/
+@import '~@ionic/angular/css/core.css';
+@import '~@ionic/angular/css/normalize.css';
+@import '~@ionic/angular/css/structure.css';
+@import '~@ionic/angular/css/typography.css';
+
+@import '~@ionic/angular/css/padding.css';
+@import '~@ionic/angular/css/float-elements.css';
+@import '~@ionic/angular/css/text-alignment.css';
+@import '~@ionic/angular/css/text-transformation.css';
+@import '~@ionic/angular/css/flex-utils.css';
+
+
+.ion-color-facebook {
+    --ion-color-base: var(--ion-color-facebook) !important;
+    --ion-color-base-rgb: var(--ion-color-facebook-rgb) !important;
+    --ion-color-contrast: var(--ion-color-facebook-contrast) !important;
+    --ion-color-contrast-rgb: var(--ion-color-facebook-contrast-rgb) !important;
+    --ion-color-shade: var(--ion-color-facebook-shade) !important;
+    --ion-color-tint: var(--ion-color-facebook-tint) !important;
+    }
+
+    @font-face {
+        font-family: 'Nunito';
+        src: url('/assets/fonts/Nunito/Nunito-Black.ttf');//mine
+      }
+    @font-face {
+        font-family: 'Nunito-Regular';
+        src: url('/assets/fonts/Nunito/Nunito-Regular.ttf');//mine
+    }
+      
+      * {
+        font-family: 'Nunito-Regular';
+      }
+    
+      .ios {
+        --ion-font-family: 'Nunito-Regular'
+      }
+    
+      .md {
+        --ion-font-family: 'Nunito-Regular'
+      }

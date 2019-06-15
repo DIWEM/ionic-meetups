@@ -1,0 +1,61 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Nueva Comida</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <div text-center>
+    <ion-row no-padding>
+      <ion-col size="6" offset="3">
+        <img [src]="image" alt="this is the image" width = "128" height = "128"/>
+      </ion-col>
+    </ion-row>
+    <ion-row no-padding>
+      <ion-col size="6" offset="3">
+        <ion-button fill="clear" expand="block" size="small" (click)="openImagePicker()">Elegir Foto</ion-button>
+      </ion-col>
+    </ion-row>
+  </div>
+  <form [formGroup]="validations_form" (ngSubmit)="onSubmit(validations_form.value)">
+    <ion-item>
+      <ion-label>Nombre:</ion-label>
+      <ion-input type="text" formControlName="title"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Estado:</ion-label>
+      <ion-input type="text" formControlName="estado"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Sodio:</ion-label>
+      <ion-input type="text" formControlName="sodio"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Azucar:</ion-label>
+      <ion-input type="text" formControlName="azucar"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Grasa Saturada:</ion-label>
+      <ion-input type="text" formControlName="grasa"></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-textarea formControlName="description" placeholder="Enter more information here..."></ion-textarea>
+    </ion-item>
+    <ion-button class="submit-btn" expand="block" type="submit">Agregar</ion-button>
+  </form>
+
+  <!-- <form [formGroup]="validations_form" (ngSubmit)="onSubmitInfo(validations_form.value)">
+    <ion-item>
+      <ion-label>Nombre:</ion-label>
+      <ion-input type="text" formControlName="name"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Apellido:</ion-label>
+      <ion-input type="text" formControlName="last"></ion-input>
+    </ion-item>
+    <ion-button class="submit-btn" expand="block" type="submit">Guardar</ion-button>
+  </form> -->
+</ion-content>

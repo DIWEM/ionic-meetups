@@ -1,0 +1,34 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "cordova-plugin-telerik-imagepicker": {
+      "PHOTO_LIBRARY_USAGE_DESCRIPTION": " ",
+      "PACKAGE_NAME": "io.ionic.ionic4FirebaseCrud"
+    },
+    "cordova-plugin-device": {
+      "PACKAGE_NAME": "io.ionic.ionic4FirebaseCrud"
+    },
+    "cordova-plugin-ionic-keyboard": {
+      "PACKAGE_NAME": "io.ionic.ionic4FirebaseCrud"
+    },
+    "cordova-plugin-ionic-webview": {
+      "PACKAGE_NAME": "io.ionic.ionic4FirebaseCrud"
+    },
+    "cordova-plugin-splashscreen": {
+      "PACKAGE_NAME": "io.ionic.ionic4FirebaseCrud"
+    },
+    "cordova-plugin-statusbar": {
+      "PACKAGE_NAME": "io.ionic.ionic4FirebaseCrud"
+    },
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "io.ionic.ionic4FirebaseCrud"
+    }
+  },
+  "dependent_plugins": {}
+}

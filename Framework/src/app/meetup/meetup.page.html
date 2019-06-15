@@ -1,0 +1,45 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-button [routerLink]="['/new-task']">
+              <ion-icon color="medium" slot="icon-only" name="cog"></ion-icon>
+            </ion-button>
+          </ion-buttons>
+      <ion-buttons slot="end">
+        <ion-button [routerLink]="['/new-task']">
+          <ion-icon color="medium" slot="icon-only" name="chatbubbles"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+      <ion-title><img src="../../assets/icon/logo.png" alt=""></ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+<ion-content>
+    <ion-card>
+        <img src="../../assets/imgs/perfil.jpg" alt="">
+        <ion-card-header>
+          <ion-card-subtitle>Developer</ion-card-subtitle>
+          <ion-card-title>Selena Gomez, 24</ion-card-title>
+        </ion-card-header>
+      
+        <ion-card-content>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, eius! Necessitatibus nesciunt.
+        </ion-card-content>
+      </ion-card>
+
+      <ion-fab vertical="bottom" horizontal="start" slot="fixed">
+          <ion-fab-button>
+            <ion-icon name="heart"></ion-icon>
+          </ion-fab-button>
+      </ion-fab>
+      <ion-fab vertical="bottom" horizontal="center" slot="fixed">
+          <ion-fab-button color="secondary">
+            <ion-icon name="flame"></ion-icon>
+          </ion-fab-button>
+      </ion-fab>
+      <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+          <ion-fab-button color="success">
+            <ion-icon name="hand"></ion-icon>
+          </ion-fab-button>
+      </ion-fab>
+</ion-content>

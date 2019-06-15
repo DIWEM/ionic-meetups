@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Detalles</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content no-padding>
+  <ion-card>
+  <div text-center>
+    <ion-row>
+      <ion-col size="6" offset="3">
+        <img [src]="image" alt="this is the image" width = "128" height = "128"/>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="6" offset="3">
+        <ion-button fill="clear" expand="block" size="small" (click)="openImagePicker()">Cambiar imagen</ion-button>
+      </ion-col>
+    </ion-row>
+  </div>
+  <form [formGroup]="validations_form" (ngSubmit)="onSubmit(validations_form.value)">
+    <ion-item>
+      <ion-label>Tittle:</ion-label>
+      <ion-input type="text" formControlName="title"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-textarea type="text" formControlName="description"></ion-textarea>
+    </ion-item>
+    <ion-button class="submit-button" expand="block" type="submit" [disabled]="!validations_form.valid"><ion-icon name="save"></ion-icon>Guardar</ion-button>
+  </form>
+  <ion-button class="delete-button" expand="block" color="danger" (click)="delete()"><ion-icon name="trash"></ion-icon>Borrar</ion-button>
+</ion-card>
+
+</ion-content>

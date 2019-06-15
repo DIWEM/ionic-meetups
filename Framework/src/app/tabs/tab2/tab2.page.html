@@ -1,0 +1,20 @@
+<ion-header>
+    <ion-toolbar color="primary">
+      <ion-buttons slot="end">
+        <ion-button>
+          <ion-icon slot="icon-only" name="md-qr-scanner"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+      <ion-searchbar color="light"></ion-searchbar>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <!-- this creates a google map on the page with the given lat/lng from -->
+    <!-- the component as the initial center of the map: -->
+    <agm-map [latitude]="lat" [longitude]="lng">
+      <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+    </agm-map>
+
+    
+</ion-content>
