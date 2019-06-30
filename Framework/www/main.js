@@ -873,6 +873,10 @@ var map = {
 		"./src/app/login/login.module.ts",
 		"login-login-module"
 	],
+	"./meetup/meetup.module": [
+		"./src/app/meetup/meetup.module.ts",
+		"meetup-meetup-module"
+	],
 	"./new-task/new-task.module": [
 		"./src/app/new-task/new-task.module.ts",
 		"new-task-new-task-module"
@@ -904,6 +908,10 @@ var map = {
 	"./tabs/tab5/tab5.module": [
 		"./src/app/tabs/tab5/tab5.module.ts",
 		"tabs-tab5-tab5-module"
+	],
+	"./user/user.module": [
+		"./src/app/user/user.module.ts",
+		"user-user-module"
 	]
 };
 function webpackAsyncContext(req) {
@@ -962,6 +970,8 @@ var routes = [
     { path: 'tab4', loadChildren: './tabs/tab4/tab4.module#Tab4PageModule' },
     { path: 'tab5', loadChildren: './tabs/tab5/tab5.module#Tab5PageModule' },
     { path: 'settings', loadChildren: './settings/settings.module#SettingsPageModule' },
+    { path: 'user', loadChildren: './user/user.module#UserPageModule' },
+    { path: 'meetup', loadChildren: './meetup/meetup.module#MeetupPageModule' },
 ];
 var AppRoutingModule = /** @class */ (function () {
     function AppRoutingModule() {
@@ -1036,6 +1046,16 @@ var AppComponent = /** @class */ (function () {
                 title: 'Settings',
                 url: '/settings',
                 icon: 'settings'
+            },
+            {
+                title: 'User',
+                url: '/user',
+                icon: 'contact'
+            },
+            {
+                title: 'Info',
+                url: '/landing',
+                icon: 'contact'
             }
         ];
         this.initializeApp();
@@ -1112,6 +1132,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_fire_auth__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @angular/fire/auth */ "./node_modules/@angular/fire/auth/index.js");
 /* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../environments/environment */ "./src/environments/environment.ts");
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+/* harmony import */ var _agm_core__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! @agm/core */ "./node_modules/@agm/core/index.js");
+/* harmony import */ var _ionic_native_nfc_ngx__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! @ionic-native/nfc/ngx */ "./node_modules/@ionic-native/nfc/ngx/index.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1135,6 +1157,10 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 // import { NewTaskModalPage } from './new-task-modal/new-task-modal.page';
+//Para Google Maps
+
+//Para NFC
+
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
@@ -1155,6 +1181,9 @@ var AppModule = /** @class */ (function () {
                 _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_11__["AngularFirestoreModule"],
                 _angular_fire_auth__WEBPACK_IMPORTED_MODULE_13__["AngularFireAuthModule"],
                 _angular_fire_storage__WEBPACK_IMPORTED_MODULE_12__["AngularFireStorageModule"],
+                _agm_core__WEBPACK_IMPORTED_MODULE_16__["AgmCoreModule"].forRoot({
+                    apiKey: 'AIzaSyAsItvwpqZuZQcbDyM6Dy2cu_3Hoo_V1_I' // Api Key para Google Maps
+                })
             ],
             providers: [
                 _ionic_native_status_bar_ngx__WEBPACK_IMPORTED_MODULE_5__["StatusBar"],
@@ -1162,7 +1191,8 @@ var AppModule = /** @class */ (function () {
                 _ionic_native_image_picker_ngx__WEBPACK_IMPORTED_MODULE_8__["ImagePicker"],
                 _ionic_native_ionic_webview_ngx__WEBPACK_IMPORTED_MODULE_9__["WebView"],
                 { provide: _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_11__["FirestoreSettingsToken"], useValue: {} },
-                { provide: _angular_router__WEBPACK_IMPORTED_MODULE_2__["RouteReuseStrategy"], useClass: _ionic_angular__WEBPACK_IMPORTED_MODULE_3__["IonicRouteStrategy"] }
+                { provide: _angular_router__WEBPACK_IMPORTED_MODULE_2__["RouteReuseStrategy"], useClass: _ionic_angular__WEBPACK_IMPORTED_MODULE_3__["IonicRouteStrategy"] },
+                _ionic_native_nfc_ngx__WEBPACK_IMPORTED_MODULE_17__["NFC"], _ionic_native_nfc_ngx__WEBPACK_IMPORTED_MODULE_17__["Ndef"]
             ],
             bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_6__["AppComponent"]]
         })
@@ -1281,6 +1311,7 @@ var FirebaseService = /** @class */ (function () {
         this.afs = afs;
         this.afAuth = afAuth;
     }
+    //Función para traer las publicaciones del usuario
     FirebaseService.prototype.getTasks = function () {
         var _this = this;
         return new Promise(function (resolve, reject) {
@@ -1292,6 +1323,7 @@ var FirebaseService = /** @class */ (function () {
             });
         });
     };
+    //Función para las publicaciones del usuario con su ID
     FirebaseService.prototype.getTask = function (taskId) {
         var _this = this;
         return new Promise(function (resolve, reject) {
@@ -1311,6 +1343,7 @@ var FirebaseService = /** @class */ (function () {
         //remember to unsubscribe from the snapshotChanges
         this.snapshotChangesSubscription.unsubscribe();
     };
+    //Función para actualizar una publicacion
     FirebaseService.prototype.updateTask = function (taskKey, value) {
         var _this = this;
         return new Promise(function (resolve, reject) {
@@ -1319,6 +1352,7 @@ var FirebaseService = /** @class */ (function () {
                 .then(function (res) { return resolve(res); }, function (err) { return reject(err); });
         });
     };
+    //Función para borrar una publicación
     FirebaseService.prototype.deleteTask = function (taskKey) {
         var _this = this;
         return new Promise(function (resolve, reject) {
@@ -1327,19 +1361,23 @@ var FirebaseService = /** @class */ (function () {
                 .then(function (res) { return resolve(res); }, function (err) { return reject(err); });
         });
     };
+    //Función para crear una publicación
     FirebaseService.prototype.createTask = function (value) {
         var _this = this;
         return new Promise(function (resolve, reject) {
             var currentUser = firebase_app__WEBPACK_IMPORTED_MODULE_2__["auth"]().currentUser;
             _this.afs.collection('people').doc(currentUser.uid).collection('tasks').add({
                 title: value.title,
+                estado: value.estado,
+                sodio: value.sodio,
+                azucar: value.azucar,
                 description: value.description,
-                demo: value.demo,
                 image: value.image
             })
                 .then(function (res) { return resolve(res); }, function (err) { return reject(err); });
         });
     };
+    //Función de verificacion de imagen
     FirebaseService.prototype.encodeImageUri = function (imageUri, callback) {
         var c = document.createElement('canvas');
         var ctx = c.getContext("2d");
@@ -1355,6 +1393,7 @@ var FirebaseService = /** @class */ (function () {
         img.src = imageUri;
     };
     ;
+    //Función para subir una imagen
     FirebaseService.prototype.uploadImage = function (imageURI, randomId) {
         var _this = this;
         return new Promise(function (resolve, reject) {
@@ -1368,6 +1407,30 @@ var FirebaseService = /** @class */ (function () {
                 }, function (err) {
                     reject(err);
                 });
+            });
+        });
+    };
+    //Funcion para guardar informacion del usuario registrado
+    FirebaseService.prototype.createUserInfo = function (value) {
+        var _this = this;
+        return new Promise(function (resolve, reject) {
+            var currentUser = firebase_app__WEBPACK_IMPORTED_MODULE_2__["auth"]().currentUser;
+            _this.afs.collection('people').doc(currentUser.uid).collection('user-info').add({
+                name: value.name,
+                last: value.last
+            })
+                .then(function (res) { return resolve(res); }, function (err) { return reject(err); });
+        });
+    };
+    //Función para traer las publicaciones del usuario
+    FirebaseService.prototype.getUserInfo = function () {
+        var _this = this;
+        return new Promise(function (resolve, reject) {
+            _this.afAuth.user.subscribe(function (currentUser) {
+                if (currentUser) {
+                    _this.snapshotChangesSubscription = _this.afs.collection('people').doc(currentUser.uid).collection('user-info').snapshotChanges();
+                    resolve(_this.snapshotChangesSubscription);
+                }
             });
         });
     };
@@ -1455,7 +1518,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/mauricio/Desktop/Ionic-Framework/src/main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! /Users/mauricio/ionic/ionic-meetups/Framework/src/main.ts */"./src/main.ts");
 
 
 /***/ })

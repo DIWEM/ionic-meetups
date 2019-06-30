@@ -1,21 +1,21 @@
-(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["tab1-tab1-module"],{
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["user-user-module"],{
 
-/***/ "./src/app/tab1/tab1.module.ts":
+/***/ "./src/app/user/user.module.ts":
 /*!*************************************!*\
-  !*** ./src/app/tab1/tab1.module.ts ***!
+  !*** ./src/app/user/user.module.ts ***!
   \*************************************/
-/*! exports provided: Tab1PageModule */
+/*! exports provided: UserPageModule */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Tab1PageModule", function() { return Tab1PageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UserPageModule", function() { return UserPageModule; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
 /* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @ionic/angular */ "./node_modules/@ionic/angular/dist/fesm5.js");
-/* harmony import */ var _tab1_page__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./tab1.page */ "./src/app/tab1/tab1.page.ts");
+/* harmony import */ var _user_page__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./user.page */ "./src/app/user/user.page.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -31,13 +31,13 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 var routes = [
     {
         path: '',
-        component: _tab1_page__WEBPACK_IMPORTED_MODULE_5__["Tab1Page"]
+        component: _user_page__WEBPACK_IMPORTED_MODULE_5__["UserPage"]
     }
 ];
-var Tab1PageModule = /** @class */ (function () {
-    function Tab1PageModule() {
+var UserPageModule = /** @class */ (function () {
+    function UserPageModule() {
     }
-    Tab1PageModule = __decorate([
+    UserPageModule = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"])({
             imports: [
                 _angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"],
@@ -45,48 +45,48 @@ var Tab1PageModule = /** @class */ (function () {
                 _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["IonicModule"],
                 _angular_router__WEBPACK_IMPORTED_MODULE_3__["RouterModule"].forChild(routes)
             ],
-            declarations: [_tab1_page__WEBPACK_IMPORTED_MODULE_5__["Tab1Page"]]
+            declarations: [_user_page__WEBPACK_IMPORTED_MODULE_5__["UserPage"]]
         })
-    ], Tab1PageModule);
-    return Tab1PageModule;
+    ], UserPageModule);
+    return UserPageModule;
 }());
 
 
 
 /***/ }),
 
-/***/ "./src/app/tab1/tab1.page.html":
+/***/ "./src/app/user/user.page.html":
 /*!*************************************!*\
-  !*** ./src/app/tab1/tab1.page.html ***!
+  !*** ./src/app/user/user.page.html ***!
   \*************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<ion-header>\n    <ion-toolbar color=\"primary\">\n        <ion-buttons slot=\"start\">\n            <ion-menu-button></ion-menu-button>\n          </ion-buttons>\n      <ion-buttons slot=\"end\">\n        <ion-button [routerLink]=\"['/new-task']\">\n          <ion-icon slot=\"icon-only\" name=\"add\"></ion-icon>\n        </ion-button>\n      </ion-buttons>\n      <ion-title>Mis Pagos Fijos</ion-title>\n    </ion-toolbar>\n</ion-header>\n\n<ion-content padding color=\"dark\">\n\n</ion-content>\n"
+module.exports = "<ion-header>\n  <ion-toolbar>\n      <ion-buttons slot=\"start\">\n          <ion-back-button defaultHref=\"home\"></ion-back-button>\n      </ion-buttons>\n    <ion-title>user</ion-title>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content padding>\n\n</ion-content>\n"
 
 /***/ }),
 
-/***/ "./src/app/tab1/tab1.page.scss":
+/***/ "./src/app/user/user.page.scss":
 /*!*************************************!*\
-  !*** ./src/app/tab1/tab1.page.scss ***!
+  !*** ./src/app/user/user.page.scss ***!
   \*************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3RhYjEvdGFiMS5wYWdlLnNjc3MifQ== */"
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3VzZXIvdXNlci5wYWdlLnNjc3MifQ== */"
 
 /***/ }),
 
-/***/ "./src/app/tab1/tab1.page.ts":
+/***/ "./src/app/user/user.page.ts":
 /*!***********************************!*\
-  !*** ./src/app/tab1/tab1.page.ts ***!
+  !*** ./src/app/user/user.page.ts ***!
   \***********************************/
-/*! exports provided: Tab1Page */
+/*! exports provided: UserPage */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Tab1Page", function() { return Tab1Page; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UserPage", function() { return UserPage; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -98,20 +98,20 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
-var Tab1Page = /** @class */ (function () {
-    function Tab1Page() {
+var UserPage = /** @class */ (function () {
+    function UserPage() {
     }
-    Tab1Page.prototype.ngOnInit = function () {
+    UserPage.prototype.ngOnInit = function () {
     };
-    Tab1Page = __decorate([
+    UserPage = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
-            selector: 'app-tab1',
-            template: __webpack_require__(/*! ./tab1.page.html */ "./src/app/tab1/tab1.page.html"),
-            styles: [__webpack_require__(/*! ./tab1.page.scss */ "./src/app/tab1/tab1.page.scss")]
+            selector: 'app-user',
+            template: __webpack_require__(/*! ./user.page.html */ "./src/app/user/user.page.html"),
+            styles: [__webpack_require__(/*! ./user.page.scss */ "./src/app/user/user.page.scss")]
         }),
         __metadata("design:paramtypes", [])
-    ], Tab1Page);
-    return Tab1Page;
+    ], UserPage);
+    return UserPage;
 }());
 
 
@@ -119,4 +119,4 @@ var Tab1Page = /** @class */ (function () {
 /***/ })
 
 }]);
-//# sourceMappingURL=tab1-tab1-module.js.map
+//# sourceMappingURL=user-user-module.js.map

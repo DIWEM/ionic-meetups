@@ -64,7 +64,7 @@ var NewTaskPageModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<ion-header>\n  <ion-toolbar color=\"primary\">\n    <ion-buttons slot=\"start\">\n      <ion-back-button defaultHref=\"home\"></ion-back-button>\n    </ion-buttons>\n    <ion-title>Agregar Amigo</ion-title>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content padding color=\"dark\">\n  <div text-center>\n    <ion-row no-padding>\n      <ion-col size=\"6\" offset=\"3\">\n        <img [src]=\"image\" alt=\"this is the image\" width = \"128\" height = \"128\"/>\n      </ion-col>\n    </ion-row>\n    <ion-row no-padding>\n      <ion-col size=\"6\" offset=\"3\">\n        <ion-button fill=\"clear\" expand=\"block\" size=\"small\" (click)=\"openImagePicker()\">Elegir Foto</ion-button>\n      </ion-col>\n    </ion-row>\n  </div>\n  <form [formGroup]=\"validations_form\" (ngSubmit)=\"onSubmit(validations_form.value)\">\n\n    <ion-item color=\"dark\">\n      <ion-label>Nombre:</ion-label>\n      <ion-input type=\"text\" formControlName=\"title\"></ion-input>\n    </ion-item>\n\n    <ion-item color=\"dark\">\n        <ion-label>Telefono: +52</ion-label>\n        <ion-input type=\"number\" formControlName=\"description\" maxlength=\"8\"></ion-input>\n    </ion-item>\n    <ion-button class=\"submit-btn\" expand=\"block\" type=\"submit\">Agregar</ion-button>\n  </form>\n</ion-content>\n"
+module.exports = "<ion-header>\n  <ion-toolbar color=\"primary\">\n    <ion-buttons slot=\"start\">\n      <ion-back-button defaultHref=\"home\"></ion-back-button>\n    </ion-buttons>\n    <ion-title>Nueva Comida</ion-title>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content padding>\n  <div text-center>\n    <ion-row no-padding>\n      <ion-col size=\"6\" offset=\"3\">\n        <img [src]=\"image\" alt=\"this is the image\" width = \"128\" height = \"128\"/>\n      </ion-col>\n    </ion-row>\n    <ion-row no-padding>\n      <ion-col size=\"6\" offset=\"3\">\n        <ion-button fill=\"clear\" expand=\"block\" size=\"small\" (click)=\"openImagePicker()\">Elegir Foto</ion-button>\n      </ion-col>\n    </ion-row>\n  </div>\n  <form [formGroup]=\"validations_form\" (ngSubmit)=\"onSubmit(validations_form.value)\">\n    <ion-item>\n      <ion-label>Nombre:</ion-label>\n      <ion-input type=\"text\" formControlName=\"title\"></ion-input>\n    </ion-item>\n    <ion-item>\n      <ion-label>Estado:</ion-label>\n      <ion-input type=\"text\" formControlName=\"estado\"></ion-input>\n    </ion-item>\n    <ion-item>\n      <ion-label>Sodio:</ion-label>\n      <ion-input type=\"text\" formControlName=\"sodio\"></ion-input>\n    </ion-item>\n    <ion-item>\n      <ion-label>Azucar:</ion-label>\n      <ion-input type=\"text\" formControlName=\"azucar\"></ion-input>\n    </ion-item>\n    <ion-item>\n      <ion-label>Grasa Saturada:</ion-label>\n      <ion-input type=\"text\" formControlName=\"grasa\"></ion-input>\n    </ion-item>\n    <ion-item>\n        <ion-textarea formControlName=\"description\" placeholder=\"Enter more information here...\"></ion-textarea>\n    </ion-item>\n    <ion-button class=\"submit-btn\" expand=\"block\" type=\"submit\">Agregar</ion-button>\n  </form>\n\n  <!-- <form [formGroup]=\"validations_form\" (ngSubmit)=\"onSubmitInfo(validations_form.value)\">\n    <ion-item>\n      <ion-label>Nombre:</ion-label>\n      <ion-input type=\"text\" formControlName=\"name\"></ion-input>\n    </ion-item>\n    <ion-item>\n      <ion-label>Apellido:</ion-label>\n      <ion-input type=\"text\" formControlName=\"last\"></ion-input>\n    </ion-item>\n    <ion-button class=\"submit-btn\" expand=\"block\" type=\"submit\">Guardar</ion-button>\n  </form> -->\n</ion-content>\n"
 
 /***/ }),
 
@@ -75,7 +75,7 @@ module.exports = "<ion-header>\n  <ion-toolbar color=\"primary\">\n    <ion-butt
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".submit-btn {\n  margin-top: 40px; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9tYXVyaWNpby9Eb3dubG9hZHMvSW9uaWMtRnJhbWV3b3JrL3NyYy9hcHAvbmV3LXRhc2svbmV3LXRhc2sucGFnZS5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsZ0JBQWdCLEVBQUEiLCJmaWxlIjoic3JjL2FwcC9uZXctdGFzay9uZXctdGFzay5wYWdlLnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuc3VibWl0LWJ0biB7XG4gIG1hcmdpbi10b3A6IDQwcHg7XG59XG4iXX0= */"
+module.exports = ".submit-btn {\n  margin-top: 40px; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9tYXVyaWNpby9pb25pYy9pb25pYy1tZWV0dXBzL0ZyYW1ld29yay9zcmMvYXBwL25ldy10YXNrL25ldy10YXNrLnBhZ2Uuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLGdCQUFnQixFQUFBIiwiZmlsZSI6InNyYy9hcHAvbmV3LXRhc2svbmV3LXRhc2sucGFnZS5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLnN1Ym1pdC1idG4ge1xuICBtYXJnaW4tdG9wOiA0MHB4O1xufVxuIl19 */"
 
 /***/ }),
 
@@ -161,23 +161,40 @@ var NewTaskPage = /** @class */ (function () {
         this.resetFields();
     };
     NewTaskPage.prototype.resetFields = function () {
-        this.image = "./assets/imgs/user.png";
+        this.image = "./assets/imgs/diet.png";
         this.validations_form = this.formBuilder.group({
             title: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"]('', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required),
-            description: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"]('', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required)
+            estado: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"]('', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required),
+            sodio: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"]('', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required),
+            azucar: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"]('', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required),
+            grasa: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"]('', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required),
+            description: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"]('', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required),
         });
     };
     NewTaskPage.prototype.onSubmit = function (value) {
         var _this = this;
         var data = {
-            demo: value.demo,
             title: value.title,
+            estado: value.estado,
+            sodio: value.sodio,
+            azucar: value.azucar,
             description: value.description,
             image: this.image
         };
         this.firebaseService.createTask(data)
             .then(function (res) {
-            _this.router.navigate(["/home"]);
+            _this.router.navigate(["/home/user/app/tab1"]);
+        });
+    };
+    NewTaskPage.prototype.onSubmitInfo = function (value) {
+        var _this = this;
+        var dataInfo = {
+            name: value.name,
+            last: value.last,
+        };
+        this.firebaseService.createUserInfo(dataInfo)
+            .then(function (res) {
+            _this.router.navigate(["/home/user/app/tab1"]);
         });
     };
     NewTaskPage.prototype.openImagePicker = function () {

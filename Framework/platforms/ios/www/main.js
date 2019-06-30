@@ -837,17 +837,25 @@ module.exports = webpackAsyncContext;
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
-	"../tab1/tab1.module": [
-		"./src/app/tab1/tab1.module.ts",
-		"tab1-tab1-module"
+	"../tabs/tab1/tab1.module": [
+		"./src/app/tabs/tab1/tab1.module.ts",
+		"tabs-tab1-tab1-module"
 	],
-	"../tab2/tab2.module": [
-		"./src/app/tab2/tab2.module.ts",
-		"tab2-tab2-module"
+	"../tabs/tab2/tab2.module": [
+		"./src/app/tabs/tab2/tab2.module.ts",
+		"tabs-tab2-tab2-module"
 	],
-	"../tab3/tab3.module": [
-		"./src/app/tab3/tab3.module.ts",
-		"tab3-tab3-module"
+	"../tabs/tab3/tab3.module": [
+		"./src/app/tabs/tab3/tab3.module.ts",
+		"tabs-tab3-tab3-module"
+	],
+	"../tabs/tab4/tab4.module": [
+		"./src/app/tabs/tab4/tab4.module.ts",
+		"tabs-tab4-tab4-module"
+	],
+	"../tabs/tab5/tab5.module": [
+		"./src/app/tabs/tab5/tab5.module.ts",
+		"tabs-tab5-tab5-module"
 	],
 	"./details/details.module": [
 		"./src/app/details/details.module.ts",
@@ -865,6 +873,10 @@ var map = {
 		"./src/app/login/login.module.ts",
 		"login-login-module"
 	],
+	"./meetup/meetup.module": [
+		"./src/app/meetup/meetup.module.ts",
+		"meetup-meetup-module"
+	],
 	"./new-task/new-task.module": [
 		"./src/app/new-task/new-task.module.ts",
 		"new-task-new-task-module"
@@ -873,21 +885,33 @@ var map = {
 		"./src/app/register/register.module.ts",
 		"register-register-module"
 	],
-	"./tab1/tab1.module": [
-		"./src/app/tab1/tab1.module.ts",
-		"tab1-tab1-module"
+	"./settings/settings.module": [
+		"./src/app/settings/settings.module.ts",
+		"settings-settings-module"
 	],
-	"./tab2/tab2.module": [
-		"./src/app/tab2/tab2.module.ts",
-		"tab2-tab2-module"
+	"./tabs/tab1/tab1.module": [
+		"./src/app/tabs/tab1/tab1.module.ts",
+		"tabs-tab1-tab1-module"
 	],
-	"./tab3/tab3.module": [
-		"./src/app/tab3/tab3.module.ts",
-		"tab3-tab3-module"
+	"./tabs/tab2/tab2.module": [
+		"./src/app/tabs/tab2/tab2.module.ts",
+		"tabs-tab2-tab2-module"
 	],
-	"./tabs/tabs.module": [
-		"./src/app/tabs/tabs.module.ts",
-		"tabs-tabs-module"
+	"./tabs/tab3/tab3.module": [
+		"./src/app/tabs/tab3/tab3.module.ts",
+		"tabs-tab3-tab3-module"
+	],
+	"./tabs/tab4/tab4.module": [
+		"./src/app/tabs/tab4/tab4.module.ts",
+		"tabs-tab4-tab4-module"
+	],
+	"./tabs/tab5/tab5.module": [
+		"./src/app/tabs/tab5/tab5.module.ts",
+		"tabs-tab5-tab5-module"
+	],
+	"./user/user.module": [
+		"./src/app/user/user.module.ts",
+		"user-user-module"
 	]
 };
 function webpackAsyncContext(req) {
@@ -933,24 +957,28 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 var routes = [
-    { path: '', redirectTo: 'login', pathMatch: 'full' },
+    { path: '', redirectTo: 'landing', pathMatch: 'full' },
     { path: 'login', loadChildren: './login/login.module#LoginPageModule' },
     { path: 'register', loadChildren: './register/register.module#RegisterPageModule' },
     { path: 'details/:id', loadChildren: './details/details.module#DetailsPageModule' },
     { path: 'home', loadChildren: './home/home.module#HomePageModule' },
     { path: 'new-task', loadChildren: './new-task/new-task.module#NewTaskPageModule' },
     { path: 'landing', loadChildren: './landing/landing.module#LandingPageModule' },
-    { path: 'tab2', loadChildren: './tab2/tab2.module#Tab2PageModule' },
-    { path: 'tab1', loadChildren: './tab1/tab1.module#Tab1PageModule' },
-    { path: 'tab3', loadChildren: './tab3/tab3.module#Tab3PageModule' },
-    { path: 'tabs', loadChildren: './tabs/tabs.module#TabsPageModule' },
+    { path: 'tab1', loadChildren: './tabs/tab1/tab1.module#Tab1PageModule' },
+    { path: 'tab2', loadChildren: './tabs/tab2/tab2.module#Tab2PageModule' },
+    { path: 'tab3', loadChildren: './tabs/tab3/tab3.module#Tab3PageModule' },
+    { path: 'tab4', loadChildren: './tabs/tab4/tab4.module#Tab4PageModule' },
+    { path: 'tab5', loadChildren: './tabs/tab5/tab5.module#Tab5PageModule' },
+    { path: 'settings', loadChildren: './settings/settings.module#SettingsPageModule' },
+    { path: 'user', loadChildren: './user/user.module#UserPageModule' },
+    { path: 'meetup', loadChildren: './meetup/meetup.module#MeetupPageModule' },
 ];
 var AppRoutingModule = /** @class */ (function () {
     function AppRoutingModule() {
     }
     AppRoutingModule = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"])({
-            imports: [_angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterModule"].forRoot(routes)],
+            imports: [_angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterModule"].forRoot(routes, { preloadingStrategy: _angular_router__WEBPACK_IMPORTED_MODULE_1__["PreloadAllModules"] })],
             exports: [_angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterModule"]]
         })
     ], AppRoutingModule);
@@ -968,7 +996,7 @@ var AppRoutingModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<ion-app>\n    <ion-menu>\n        <ion-header>\n            <ion-toolbar color=\"primary\">\n                <ion-title>Menu</ion-title>\n            </ion-toolbar>\n        </ion-header>\n\n        <ion-content color=\"dark\">\n            <ion-list>\n                <ion-menu-toggle>\n                    <ion-item color=\"dark\" *ngFor=\"let p of appPages\" [routerLink]=\"p.url\" [routerDirection]=\"'root'\">\n                        <ion-icon slot=\"start\" [name]=\"p.icon\"></ion-icon>\n                        <ion-label>{{p.title}}</ion-label>\n                    </ion-item>\n                </ion-menu-toggle>\n            </ion-list>\n        </ion-content>\n\n        <ion-footer (click)=\"logout()\">\n            <ion-menu-toggle>\n            <ion-toolbar color=\"danger\">\n              <ion-title>Salir</ion-title>\n            </ion-toolbar>\n            </ion-menu-toggle>\n        </ion-footer>\n    </ion-menu>\n    <ion-router-outlet main></ion-router-outlet>\n</ion-app>\n"
+module.exports = "<ion-app>\n    <ion-menu>\n        <ion-header>\n            <ion-toolbar color=\"primary\">\n                <ion-title>Menu</ion-title>\n            </ion-toolbar>\n        </ion-header>\n\n        <ion-content>\n            <ion-list>\n                <ion-menu-toggle>\n                    <ion-item *ngFor=\"let p of appPages\" [routerLink]=\"p.url\" [routerDirection]=\"'root'\">\n                        <ion-icon slot=\"start\" [name]=\"p.icon\"></ion-icon>\n                        <ion-label>{{p.title}}</ion-label>\n                    </ion-item>\n                </ion-menu-toggle>\n            </ion-list>\n        </ion-content>\n\n        <ion-footer>\n            <ion-menu-toggle>\n            <ion-toolbar color=\"danger\">\n              <ion-button expand=\"block\" fill=\"clear\" (click)=\"logout()\" color=\"light\"><ion-icon name=\"exit\"></ion-icon>Cerrar sesión</ion-button>\n            </ion-toolbar>\n            </ion-menu-toggle>\n        </ion-footer>\n    </ion-menu>\n    <ion-router-outlet main></ion-router-outlet>\n</ion-app>\n"
 
 /***/ }),
 
@@ -1015,19 +1043,19 @@ var AppComponent = /** @class */ (function () {
         this.afAuth = afAuth;
         this.appPages = [
             {
-                title: 'Ingresos',
-                url: '/home',
-                icon: 'wallet'
+                title: 'Settings',
+                url: '/settings',
+                icon: 'settings'
             },
             {
-                title: 'Pagos Fijos',
-                url: '/tab1',
-                icon: 'card'
+                title: 'User',
+                url: '/user',
+                icon: 'contact'
             },
             {
-                title: 'Dinero Restante',
-                url: '/tab2',
-                icon: 'cash'
+                title: 'Info',
+                url: '/landing',
+                icon: 'contact'
             }
         ];
         this.initializeApp();
@@ -1040,10 +1068,10 @@ var AppComponent = /** @class */ (function () {
                     _this.router.navigate(["/home"]);
                 }
                 else {
-                    _this.router.navigate(["/login"]);
+                    _this.router.navigate(["/landing"]);
                 }
             }, function (err) {
-                _this.router.navigate(["/login"]);
+                _this.router.navigate(["/landing"]);
             }, function () {
                 _this.splashScreen.hide();
             });
@@ -1104,6 +1132,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_fire_auth__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @angular/fire/auth */ "./node_modules/@angular/fire/auth/index.js");
 /* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../environments/environment */ "./src/environments/environment.ts");
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+/* harmony import */ var _agm_core__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! @agm/core */ "./node_modules/@agm/core/index.js");
+/* harmony import */ var _ionic_native_nfc_ngx__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! @ionic-native/nfc/ngx */ "./node_modules/@ionic-native/nfc/ngx/index.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1127,6 +1157,10 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 // import { NewTaskModalPage } from './new-task-modal/new-task-modal.page';
+//Para Google Maps
+
+//Para NFC
+
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
@@ -1147,6 +1181,9 @@ var AppModule = /** @class */ (function () {
                 _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_11__["AngularFirestoreModule"],
                 _angular_fire_auth__WEBPACK_IMPORTED_MODULE_13__["AngularFireAuthModule"],
                 _angular_fire_storage__WEBPACK_IMPORTED_MODULE_12__["AngularFireStorageModule"],
+                _agm_core__WEBPACK_IMPORTED_MODULE_16__["AgmCoreModule"].forRoot({
+                    apiKey: 'AIzaSyAsItvwpqZuZQcbDyM6Dy2cu_3Hoo_V1_I' // Api Key para Google Maps
+                })
             ],
             providers: [
                 _ionic_native_status_bar_ngx__WEBPACK_IMPORTED_MODULE_5__["StatusBar"],
@@ -1154,7 +1191,8 @@ var AppModule = /** @class */ (function () {
                 _ionic_native_image_picker_ngx__WEBPACK_IMPORTED_MODULE_8__["ImagePicker"],
                 _ionic_native_ionic_webview_ngx__WEBPACK_IMPORTED_MODULE_9__["WebView"],
                 { provide: _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_11__["FirestoreSettingsToken"], useValue: {} },
-                { provide: _angular_router__WEBPACK_IMPORTED_MODULE_2__["RouteReuseStrategy"], useClass: _ionic_angular__WEBPACK_IMPORTED_MODULE_3__["IonicRouteStrategy"] }
+                { provide: _angular_router__WEBPACK_IMPORTED_MODULE_2__["RouteReuseStrategy"], useClass: _ionic_angular__WEBPACK_IMPORTED_MODULE_3__["IonicRouteStrategy"] },
+                _ionic_native_nfc_ngx__WEBPACK_IMPORTED_MODULE_17__["NFC"], _ionic_native_nfc_ngx__WEBPACK_IMPORTED_MODULE_17__["Ndef"]
             ],
             bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_6__["AppComponent"]]
         })
@@ -1273,6 +1311,7 @@ var FirebaseService = /** @class */ (function () {
         this.afs = afs;
         this.afAuth = afAuth;
     }
+    //Función para traer las publicaciones del usuario
     FirebaseService.prototype.getTasks = function () {
         var _this = this;
         return new Promise(function (resolve, reject) {
@@ -1284,6 +1323,7 @@ var FirebaseService = /** @class */ (function () {
             });
         });
     };
+    //Función para las publicaciones del usuario con su ID
     FirebaseService.prototype.getTask = function (taskId) {
         var _this = this;
         return new Promise(function (resolve, reject) {
@@ -1303,6 +1343,7 @@ var FirebaseService = /** @class */ (function () {
         //remember to unsubscribe from the snapshotChanges
         this.snapshotChangesSubscription.unsubscribe();
     };
+    //Función para actualizar una publicacion
     FirebaseService.prototype.updateTask = function (taskKey, value) {
         var _this = this;
         return new Promise(function (resolve, reject) {
@@ -1311,6 +1352,7 @@ var FirebaseService = /** @class */ (function () {
                 .then(function (res) { return resolve(res); }, function (err) { return reject(err); });
         });
     };
+    //Función para borrar una publicación
     FirebaseService.prototype.deleteTask = function (taskKey) {
         var _this = this;
         return new Promise(function (resolve, reject) {
@@ -1319,18 +1361,23 @@ var FirebaseService = /** @class */ (function () {
                 .then(function (res) { return resolve(res); }, function (err) { return reject(err); });
         });
     };
+    //Función para crear una publicación
     FirebaseService.prototype.createTask = function (value) {
         var _this = this;
         return new Promise(function (resolve, reject) {
             var currentUser = firebase_app__WEBPACK_IMPORTED_MODULE_2__["auth"]().currentUser;
             _this.afs.collection('people').doc(currentUser.uid).collection('tasks').add({
                 title: value.title,
+                estado: value.estado,
+                sodio: value.sodio,
+                azucar: value.azucar,
                 description: value.description,
                 image: value.image
             })
                 .then(function (res) { return resolve(res); }, function (err) { return reject(err); });
         });
     };
+    //Función de verificacion de imagen
     FirebaseService.prototype.encodeImageUri = function (imageUri, callback) {
         var c = document.createElement('canvas');
         var ctx = c.getContext("2d");
@@ -1346,6 +1393,7 @@ var FirebaseService = /** @class */ (function () {
         img.src = imageUri;
     };
     ;
+    //Función para subir una imagen
     FirebaseService.prototype.uploadImage = function (imageURI, randomId) {
         var _this = this;
         return new Promise(function (resolve, reject) {
@@ -1359,6 +1407,30 @@ var FirebaseService = /** @class */ (function () {
                 }, function (err) {
                     reject(err);
                 });
+            });
+        });
+    };
+    //Funcion para guardar informacion del usuario registrado
+    FirebaseService.prototype.createUserInfo = function (value) {
+        var _this = this;
+        return new Promise(function (resolve, reject) {
+            var currentUser = firebase_app__WEBPACK_IMPORTED_MODULE_2__["auth"]().currentUser;
+            _this.afs.collection('people').doc(currentUser.uid).collection('user-info').add({
+                name: value.name,
+                last: value.last
+            })
+                .then(function (res) { return resolve(res); }, function (err) { return reject(err); });
+        });
+    };
+    //Función para traer las publicaciones del usuario
+    FirebaseService.prototype.getUserInfo = function () {
+        var _this = this;
+        return new Promise(function (resolve, reject) {
+            _this.afAuth.user.subscribe(function (currentUser) {
+                if (currentUser) {
+                    _this.snapshotChangesSubscription = _this.afs.collection('people').doc(currentUser.uid).collection('user-info').snapshotChanges();
+                    resolve(_this.snapshotChangesSubscription);
+                }
             });
         });
     };
@@ -1446,7 +1518,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/mauricio/Downloads/Ionic-Framework/src/main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! /Users/mauricio/ionic/ionic-meetups/Framework/src/main.ts */"./src/main.ts");
 
 
 /***/ })

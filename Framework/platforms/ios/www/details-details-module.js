@@ -69,7 +69,7 @@ var DetailsPageModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<ion-header>\n  <ion-toolbar color=\"primary\">\n    <ion-buttons slot=\"start\">\n      <ion-back-button defaultHref=\"home\"></ion-back-button>\n    </ion-buttons>\n    <ion-title>Detalles</ion-title>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content padding color=\"dark\">\n  <div text-center>\n    <ion-row>\n      <ion-col size=\"6\" offset=\"3\">\n        <img [src]=\"image\" alt=\"this is the image\" width = \"128\" height = \"128\"/>\n      </ion-col>\n    </ion-row>\n    <ion-row>\n      <ion-col size=\"6\" offset=\"3\">\n        <ion-button fill=\"clear\" expand=\"block\" size=\"small\" (click)=\"openImagePicker()\">Cambiar imagen</ion-button>\n      </ion-col>\n    </ion-row>\n  </div>\n  <form [formGroup]=\"validations_form\" (ngSubmit)=\"onSubmit(validations_form.value)\">\n    <ion-item color=\"dark\">\n      <ion-label>Nombre:</ion-label>\n      <ion-input type=\"text\" formControlName=\"title\"></ion-input>\n    </ion-item>\n    <ion-item color=\"dark\">\n      <ion-label>Telefono: +52 </ion-label>\n      <ion-input type=\"text\" formControlName=\"description\"></ion-input>\n    </ion-item>\n    <ion-item>\n      <ion-label>Cantidad: $ </ion-label>\n      <ion-input type=\"text\"></ion-input>\n    </ion-item>  \n    <ion-item>\n      <ion-label>Metodo de Pago</ion-label>\n      <ion-select value=\"blonde\" okText=\"Aceptar\" cancelText=\"Cancelar\">\n        <ion-select-option value=\"brown\">Mastercard **** 4477</ion-select-option>\n        <ion-select-option value=\"blonde\">Visa **** 5487</ion-select-option>\n        <ion-select-option value=\"black\">Cuenta Virtual</ion-select-option>\n        <ion-select-option value=\"red\">Efectivo OXXO</ion-select-option>\n      </ion-select>\n    </ion-item>\n\n    <ion-button class=\"delete-button\" expand=\"block\" color=\"secondary\" (click)=\"envioSMS()\"><ion-icon name=\"send\"></ion-icon>Enviar Dinero</ion-button>\n    <ion-button class=\"submit-button\" expand=\"block\" type=\"submit\" [disabled]=\"!validations_form.valid\"><ion-icon name=\"save\"></ion-icon>Guardar</ion-button>\n  </form>\n  <br>\n  <ion-button class=\"delete-button\" expand=\"block\" color=\"danger\" (click)=\"delete()\"><ion-icon name=\"trash\"></ion-icon>Borrar</ion-button>\n\n</ion-content>\n"
+module.exports = "<ion-header>\n  <ion-toolbar color=\"primary\">\n    <ion-buttons slot=\"start\">\n      <ion-back-button defaultHref=\"home\"></ion-back-button>\n    </ion-buttons>\n    <ion-title>Detalles</ion-title>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content no-padding>\n  <ion-card>\n  <div text-center>\n    <ion-row>\n      <ion-col size=\"6\" offset=\"3\">\n        <img [src]=\"image\" alt=\"this is the image\" width = \"128\" height = \"128\"/>\n      </ion-col>\n    </ion-row>\n    <ion-row>\n      <ion-col size=\"6\" offset=\"3\">\n        <ion-button fill=\"clear\" expand=\"block\" size=\"small\" (click)=\"openImagePicker()\">Cambiar imagen</ion-button>\n      </ion-col>\n    </ion-row>\n  </div>\n  <form [formGroup]=\"validations_form\" (ngSubmit)=\"onSubmit(validations_form.value)\">\n    <ion-item>\n      <ion-label>Tittle:</ion-label>\n      <ion-input type=\"text\" formControlName=\"title\"></ion-input>\n    </ion-item>\n    <ion-item>\n      <ion-textarea type=\"text\" formControlName=\"description\"></ion-textarea>\n    </ion-item>\n    <ion-button class=\"submit-button\" expand=\"block\" type=\"submit\" [disabled]=\"!validations_form.valid\"><ion-icon name=\"save\"></ion-icon>Guardar</ion-button>\n  </form>\n  <ion-button class=\"delete-button\" expand=\"block\" color=\"danger\" (click)=\"delete()\"><ion-icon name=\"trash\"></ion-icon>Borrar</ion-button>\n</ion-card>\n\n</ion-content>\n"
 
 /***/ }),
 
@@ -80,7 +80,7 @@ module.exports = "<ion-header>\n  <ion-toolbar color=\"primary\">\n    <ion-butt
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".submit-button {\n  margin-top: 40px; }\n\n.delete-button {\n  margin-top: 20px; }\n\nimg {\n  border-radius: 50%; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9tYXVyaWNpby9Eb3dubG9hZHMvSW9uaWMtRnJhbWV3b3JrL3NyYy9hcHAvZGV0YWlscy9kZXRhaWxzLnBhZ2Uuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLGdCQUFnQixFQUFBOztBQUVsQjtFQUNFLGdCQUFnQixFQUFBOztBQUdsQjtFQUNFLGtCQUFrQixFQUFBIiwiZmlsZSI6InNyYy9hcHAvZGV0YWlscy9kZXRhaWxzLnBhZ2Uuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi5zdWJtaXQtYnV0dG9uIHtcbiAgbWFyZ2luLXRvcDogNDBweDtcbn1cbi5kZWxldGUtYnV0dG9uIHtcbiAgbWFyZ2luLXRvcDogMjBweDtcbn1cblxuaW1nIHtcbiAgYm9yZGVyLXJhZGl1czogNTAlO1xufSJdfQ== */"
+module.exports = ".submit-button {\n  margin-top: 40px; }\n\n.delete-button {\n  margin-top: 20px; }\n\nimg {\n  border-radius: 50%; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9tYXVyaWNpby9pb25pYy9pb25pYy1tZWV0dXBzL0ZyYW1ld29yay9zcmMvYXBwL2RldGFpbHMvZGV0YWlscy5wYWdlLnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxnQkFBZ0IsRUFBQTs7QUFFbEI7RUFDRSxnQkFBZ0IsRUFBQTs7QUFHbEI7RUFDRSxrQkFBa0IsRUFBQSIsImZpbGUiOiJzcmMvYXBwL2RldGFpbHMvZGV0YWlscy5wYWdlLnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuc3VibWl0LWJ1dHRvbiB7XG4gIG1hcmdpbi10b3A6IDQwcHg7XG59XG4uZGVsZXRlLWJ1dHRvbiB7XG4gIG1hcmdpbi10b3A6IDIwcHg7XG59XG5cbmltZyB7XG4gIGJvcmRlci1yYWRpdXM6IDUwJTtcbn0iXX0= */"
 
 /***/ }),
 
@@ -191,7 +191,7 @@ var DetailsPage = /** @class */ (function () {
         };
         this.firebaseService.updateTask(this.item.id, data)
             .then(function (res) {
-            _this.router.navigate(["/home"]);
+            _this.router.navigate(["/home/user/app/tab1"]);
         });
     };
     DetailsPage.prototype.delete = function () {
@@ -215,7 +215,7 @@ var DetailsPage = /** @class */ (function () {
                                     handler: function () {
                                         _this.firebaseService.deleteTask(_this.item.id)
                                             .then(function (res) {
-                                            _this.router.navigate(["/home"]);
+                                            _this.router.navigate(["/home/user/app/tab1"]);
                                         }, function (err) { return console.log(err); });
                                     }
                                 }

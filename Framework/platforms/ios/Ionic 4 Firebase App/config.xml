@@ -42,11 +42,18 @@
         <param name="ios-package" value="CDVStatusBar" />
         <param name="onload" value="true" />
     </feature>
+    <feature name="ApplePay">
+        <param name="ios-package" value="CDVApplePay" />
+    </feature>
+    <feature name="NfcPlugin">
+        <param name="ios-package" value="NfcPlugin" />
+    </feature>
     <name>Ionic 4 Firebase App</name>
     <description>An awesome Ionic/Cordova app.</description>
     <author email="hi@ionicframework" href="https://ionicthemes.com/">IonicThemes Team</author>
     <content src="index.html" />
     <access origin="*" />
+    <gap:plugin name="phonegap-nfc" source="npm" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
     <allow-intent href="tel:*" />
@@ -110,10 +117,4 @@
     <preference name="SplashShowOnlyFirstTime" value="false" />
     <preference name="SplashScreen" value="screen" />
     <preference name="SplashScreenDelay" value="3000" />
-    <feature name="ApplePay">
-        <param name="ios-package" value="CDVApplePay" />
-    </feature>
-    <feature name="NfcPlugin">
-        <param name="ios-package" value="NfcPlugin" />
-    </feature>
 </widget>
