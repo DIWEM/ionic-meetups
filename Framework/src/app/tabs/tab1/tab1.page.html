@@ -80,13 +80,39 @@
 
 <ion-content>
 
-      <ngx-barcode [bc-value]="value" [bc-display-value]="true"></ngx-barcode>
+      <!-- <ngx-barcode [bc-value]="value" [bc-display-value]="true"></ngx-barcode>
 
       <ngx-qrcode 
-        [qrc-value] = "value"
+        [qrc-value] = "qrData"
         qrc-class = "aclass"
         qrc-errorCorrectionLevel = "L">
-      </ngx-qrcode>
+      </ngx-qrcode> -->
+
+
+        <!-- QR de Págo -->
+  <!-- <qrcode [qrdata]="'Your QR code data string'" [size]="256" [level]="'M'"></qrcode> -->
+  <ion-card class="animated zoomInDown" mode="ios">
+      <ion-row>
+        <ion-col size="6">
+          <div text-center>
+            <ngx-qrcode [qrc-value]="qrCode"></ngx-qrcode>
+            <!-- <qrcode [qrdata]="'Your QR code data string'" [size]="256" [level]="'M'"></qrcode> -->
+          </div>
+        </ion-col>
+        <ion-col size="6">
+          <h3>Págo De:</h3>
+          <div text-left class="animated bounceInLeft" *ngIf="createdCode">
+            <a style="font-weight: bold; font-size: 32px; color:#616161;">${{ createdCode }}</a>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-card>
+  
+    <ion-fab class="animated pulse" vertical="top" horizontal="end" slot="fixed">
+    <ion-fab-button color="light" mode="ios">
+      <ion-icon name="resize"></ion-icon>
+    </ion-fab-button>
+    </ion-fab>
 
   
   </ion-content>
