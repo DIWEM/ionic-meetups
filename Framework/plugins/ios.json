@@ -28,13 +28,6 @@
     },
     "cordova-plugin-whitelist": {
       "PACKAGE_NAME": "io.ionic.ionic4FirebaseCrud"
-    },
-    "cordova-plugin-applepay": {
-      "PACKAGE_NAME": "diwem.app2"
-    },
-    "phonegap-nfc": {
-      "NFC_USAGE_DESCRIPTION": "Read NFC Tags",
-      "PACKAGE_NAME": "diwem.app2"
     }
   },
   "dependent_plugins": {}

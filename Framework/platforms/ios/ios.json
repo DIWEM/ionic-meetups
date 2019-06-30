@@ -55,14 +55,6 @@
             {
               "xml": "<preference name=\"StatusBarStyle\" value=\"lightcontent\" />",
               "count": 1
-            },
-            {
-              "xml": "<feature name=\"ApplePay\"><param name=\"ios-package\" value=\"CDVApplePay\" /></feature>",
-              "count": 1
-            },
-            {
-              "xml": "<feature name=\"NfcPlugin\"><param name=\"ios-package\" value=\"NfcPlugin\" /></feature>",
-              "count": 1
             }
           ]
         }
@@ -75,32 +67,17 @@
               "count": 1
             }
           ],
-          "NFCReaderUsageDescription": [
-            {
-              "xml": "<string>Read NFC Tags</string>",
-              "count": 1
-            }
-          ]
+          "NFCReaderUsageDescription": []
         }
       },
       "*-Debug.plist": {
         "parents": {
-          "com.apple.developer.nfc.readersession.formats": [
-            {
-              "xml": "<array><string>NDEF</string></array>",
-              "count": 1
-            }
-          ]
+          "com.apple.developer.nfc.readersession.formats": []
         }
       },
       "*-Release.plist": {
         "parents": {
-          "com.apple.developer.nfc.readersession.formats": [
-            {
-              "xml": "<array><string>NDEF</string></array>",
-              "count": 1
-            }
-          ]
+          "com.apple.developer.nfc.readersession.formats": []
         }
       }
     }
@@ -127,13 +104,6 @@
     },
     "cordova-plugin-whitelist": {
       "PACKAGE_NAME": "io.ionic.ionic4FirebaseCrud"
-    },
-    "cordova-plugin-applepay": {
-      "PACKAGE_NAME": "diwem.app2"
-    },
-    "phonegap-nfc": {
-      "NFC_USAGE_DESCRIPTION": "Read NFC Tags",
-      "PACKAGE_NAME": "diwem.app2"
     }
   },
   "dependent_plugins": {},
@@ -193,20 +163,6 @@
       "clobbers": [
         "window.StatusBar"
       ]
-    },
-    {
-      "id": "cordova-plugin-applepay.payment",
-      "file": "plugins/cordova-plugin-applepay/www/applepay.js",
-      "pluginId": "cordova-plugin-applepay",
-      "clobbers": [
-        "ApplePay"
-      ]
-    },
-    {
-      "id": "phonegap-nfc.NFC",
-      "file": "plugins/phonegap-nfc/www/phonegap-nfc.js",
-      "pluginId": "phonegap-nfc",
-      "runs": true
     }
   ],
   "plugin_metadata": {
@@ -216,8 +172,6 @@
     "cordova-plugin-ionic-webview": "2.4.0",
     "cordova-plugin-splashscreen": "5.0.2",
     "cordova-plugin-statusbar": "2.4.2",
-    "cordova-plugin-whitelist": "1.3.3",
-    "cordova-plugin-applepay": "5.0.0",
-    "phonegap-nfc": "1.0.3"
+    "cordova-plugin-whitelist": "1.3.3"
   }
 }

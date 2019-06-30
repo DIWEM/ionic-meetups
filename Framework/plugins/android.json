@@ -7,9 +7,6 @@
     "files": {}
   },
   "installed_plugins": {
-    "cordova-plugin-applepay": {
-      "PACKAGE_NAME": "diwem.app2"
-    },
     "cordova-plugin-device": {
       "PACKAGE_NAME": "diwem.app2"
     },
@@ -30,9 +27,6 @@
       "PACKAGE_NAME": "diwem.app2"
     },
     "cordova-plugin-whitelist": {
-      "PACKAGE_NAME": "diwem.app2"
-    },
-    "phonegap-nfc": {
       "PACKAGE_NAME": "diwem.app2"
     }
   },
