@@ -101,18 +101,12 @@
         </ion-col>
         <ion-col size="6">
           <h3>Págo De:</h3>
-          <div text-left class="animated bounceInLeft" *ngIf="createdCode">
+          <div text-left *ngIf="createdCode">
             <a style="font-weight: bold; font-size: 32px; color:#616161;">${{ createdCode }}</a>
           </div>
         </ion-col>
       </ion-row>
     </ion-card>
-  
-    <ion-fab class="animated pulse" vertical="top" horizontal="end" slot="fixed">
-    <ion-fab-button color="light" mode="ios">
-      <ion-icon name="resize"></ion-icon>
-    </ion-fab-button>
-    </ion-fab>
 
   
   </ion-content>

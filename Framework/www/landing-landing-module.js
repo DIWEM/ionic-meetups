@@ -88,7 +88,6 @@ module.exports = ".tutorial-page .toolbar-background {\n  background: #fff;\n  b
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LandingPage", function() { return LandingPage; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _ionic_native_nfc_ngx__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @ionic-native/nfc/ngx */ "./node_modules/@ionic-native/nfc/ngx/index.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -99,29 +98,12 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
-
 var LandingPage = /** @class */ (function () {
-    function LandingPage(nfc, ndef) {
-        this.nfc = nfc;
-        this.ndef = ndef;
+    function LandingPage() {
     }
     LandingPage.prototype.ngOnInit = function () {
     };
     LandingPage.prototype.nfclick = function () {
-        var _this = this;
-        this.nfc.beginSession().subscribe(function (res) {
-            _this.nfc.addNdefListener(function () {
-                alert('successfully attached ndef listener');
-            }, function (err) {
-                console.log('error attaching ndef listener', err);
-                alert(('error attaching ndef listener' + err));
-            }).subscribe(function (event) {
-                console.log('received ndef message. the tag contains: ', event.tag);
-                console.log('decoded tag id', _this.nfc.bytesToHexString(event.tag.id));
-            });
-        }, function (err) {
-            console.log(err);
-        });
     };
     LandingPage = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -129,7 +111,7 @@ var LandingPage = /** @class */ (function () {
             template: __webpack_require__(/*! ./landing.page.html */ "./src/app/landing/landing.page.html"),
             styles: [__webpack_require__(/*! ./landing.page.scss */ "./src/app/landing/landing.page.scss")]
         }),
-        __metadata("design:paramtypes", [_ionic_native_nfc_ngx__WEBPACK_IMPORTED_MODULE_1__["NFC"], _ionic_native_nfc_ngx__WEBPACK_IMPORTED_MODULE_1__["Ndef"]])
+        __metadata("design:paramtypes", [])
     ], LandingPage);
     return LandingPage;
 }());

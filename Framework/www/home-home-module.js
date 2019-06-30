@@ -179,7 +179,7 @@ var HomePageModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<ion-tabs>\n\n    <ion-tab-bar slot=\"bottom\" color=\"primary\">\n      <ion-tab-button tab=\"tab1\">\n        <ion-icon name=\"home\"></ion-icon>\n      </ion-tab-button>\n  \n      <ion-tab-button tab=\"tab2\">\n        <ion-icon name=\"search\"></ion-icon>\n      </ion-tab-button>\n  \n      <ion-tab-button tab=\"tab3\">\n        <ion-icon name=\"radio-button-on\"></ion-icon>\n      </ion-tab-button>\n\n      <ion-tab-button tab=\"tab4\">\n        <ion-icon name=\"chatbubbles\"></ion-icon>\n      </ion-tab-button>\n\n      <ion-tab-button tab=\"tab5\">\n        <ion-icon name=\"md-contact\"></ion-icon>\n      </ion-tab-button>\n    </ion-tab-bar>\n  \n  </ion-tabs>\n"
+module.exports = "<ion-tabs>\n\n    <ion-tab-bar slot=\"bottom\" color=\"primary\">\n      <ion-tab-button tab=\"tab1\">\n        <ion-icon name=\"wallet\"></ion-icon>\n      </ion-tab-button>\n  \n      <ion-tab-button tab=\"tab2\">\n        <ion-icon name=\"search\"></ion-icon>\n      </ion-tab-button>\n  \n      <ion-tab-button tab=\"tab3\">\n        <ion-icon name=\"radio-button-on\"></ion-icon>\n      </ion-tab-button>\n\n      <ion-tab-button tab=\"tab4\">\n        <ion-icon name=\"chatbubbles\"></ion-icon>\n      </ion-tab-button>\n\n      <ion-tab-button tab=\"tab5\">\n        <ion-icon name=\"md-contact\"></ion-icon>\n      </ion-tab-button>\n    </ion-tab-bar>\n  \n  </ion-tabs>\n"
 
 /***/ }),
 

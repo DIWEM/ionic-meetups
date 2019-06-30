@@ -12,7 +12,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 export class Tab1Page implements OnInit {
 
   qrData = "0"; //Para integrar al createdCode
-  createdCode = null; //Crea el QR
+  createdCode = "0"; //Crea el QR
 
   //Variables JSON QR
   jsonQRot = "0001";
@@ -123,7 +123,7 @@ export class Tab1Page implements OnInit {
     oneButton(){
       if (this.qrData.length > 4){
         this.createdCode = this.qrData.slice(0,5);
-        this.qrCode = this.myJSON.concat(this.createdCode)//Crea un QR Completo
+        this.qrCode = this.qrURL.concat(this.createdCode)//Crea un QR Completo
       }
       else{
         if (this.qrData == "0"){

@@ -25,7 +25,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AgmCoreModule } from '@agm/core';
 
 //Para NFC
-import { NFC, Ndef } from '@ionic-native/nfc/ngx';
+// import { NFC, Ndef } from '@ionic-native/nfc/ngx';
+
+//Para QR
 import { NgxQRCodeModule } from 'ngx-qrcode2';
 
 @NgModule({
@@ -55,8 +57,7 @@ import { NgxQRCodeModule } from 'ngx-qrcode2';
     ImagePicker,
     WebView,
     { provide: FirestoreSettingsToken, useValue: {} },
-    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
-    NFC, Ndef
+    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]
 })
