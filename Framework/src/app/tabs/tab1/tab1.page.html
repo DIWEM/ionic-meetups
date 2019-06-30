@@ -53,7 +53,7 @@
   </ion-row>
 </ion-content> -->
 
-<ion-content *ngIf="items" class="list-mini-content" no-padding>
+<!-- <ion-content *ngIf="items" class="list-mini-content" no-padding>
     <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
         <ion-refresher-content
           pullingIcon="arrow-dropdown"
@@ -76,4 +76,63 @@
   <div *ngIf="items.length == 0" class="empty-list">
     Ingresa un nuevo alimento.
   </div>
-</ion-content>
+</ion-content> -->
+
+<ion-content>
+
+    <h1>
+        {{title}}
+      </h1>
+      <ngx-barcode [bc-value]="value" [bc-display-value]="true"></ngx-barcode>
+
+      <ngx-qrcode 
+        [qrc-value] = "value"
+        qrc-class = "aclass"
+        qrc-errorCorrectionLevel = "L">
+        </ngx-qrcode>
+
+  
+  </ion-content>
+
+<!-- Teclado de pago -->
+<ion-footer class="animated fadeInUp" color="light" mode="ios">
+    <ion-row>
+      <ion-col size="4">
+        <ion-button mode="ios" color="light" expand="block" (click)="oneButton()">1</ion-button>
+      </ion-col>
+      <ion-col size="4">
+        <ion-button mode="ios" color="light" expand="block" (click)="twoButton()">2</ion-button>
+      </ion-col>
+      <ion-col size="4">
+        <ion-button mode="ios" color="light" expand="block" (click)="threeButton()">3</ion-button>
+      </ion-col>
+      <ion-col size="4">
+        <ion-button mode="ios" color="light" expand="block" (click)="fourButton()">4</ion-button>
+      </ion-col>
+      <ion-col size="4">
+        <ion-button mode="ios" color="light" expand="block" (click)="fiveButton()">5</ion-button>
+      </ion-col>
+      <ion-col size="4">
+        <ion-button mode="ios" color="light" expand="block" (click)="sixButton()">6</ion-button>
+      </ion-col>
+      <ion-col size="4">
+        <ion-button mode="ios" color="light" expand="block" (click)="sevenButton()">7</ion-button>
+      </ion-col>
+      <ion-col size="4">
+        <ion-button mode="ios" color="light" expand="block" (click)="eightButton()">8</ion-button>
+      </ion-col>
+      <ion-col size="4">
+        <ion-button mode="ios" color="light" expand="block" (click)="nineButton()">9</ion-button>
+      </ion-col>
+      <ion-col size="4">
+        <ion-button mode="ios" color="secondary" expand="block" (click)="scanCode()"><ion-icon name="barcode"></ion-icon></ion-button>
+      </ion-col>
+      <ion-col size="4">
+        <ion-button mode="ios" color="light" expand="block" (click)="zeroButton()">0</ion-button>
+      </ion-col>
+      <ion-col size="4">
+        <ion-button mode="ios" color="danger" expand="block" (click)="cleanButton()"><ion-icon name="close"></ion-icon></ion-button>
+      </ion-col>
+    </ion-row>
+    </ion-footer>
+    

@@ -26,6 +26,7 @@ import { AgmCoreModule } from '@agm/core';
 
 //Para NFC
 import { NFC, Ndef } from '@ionic-native/nfc/ngx';
+import { NgxQRCodeModule } from 'ngx-qrcode2';
 
 @NgModule({
   declarations: [AppComponent],
@@ -45,7 +46,8 @@ import { NFC, Ndef } from '@ionic-native/nfc/ngx';
     AngularFireStorageModule, // imports firebase/storage
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyAsItvwpqZuZQcbDyM6Dy2cu_3Hoo_V1_I' // Api Key para Google Maps
-    })
+    }),
+    NgxQRCodeModule
   ],
   providers: [
     StatusBar,
