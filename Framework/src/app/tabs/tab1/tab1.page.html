@@ -80,16 +80,13 @@
 
 <ion-content>
 
-    <h1>
-        {{title}}
-      </h1>
       <ngx-barcode [bc-value]="value" [bc-display-value]="true"></ngx-barcode>
 
       <ngx-qrcode 
         [qrc-value] = "value"
         qrc-class = "aclass"
         qrc-errorCorrectionLevel = "L">
-        </ngx-qrcode>
+      </ngx-qrcode>
 
   
   </ion-content>

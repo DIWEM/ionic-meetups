@@ -11,6 +11,8 @@ import { Router, ActivatedRoute } from '@angular/router';
 })
 export class Tab1Page implements OnInit {
 
+  value = "hola";
+
   items: Array<any>;
 
   constructor(
