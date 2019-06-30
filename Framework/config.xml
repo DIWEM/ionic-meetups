@@ -5,7 +5,6 @@
     <author email="hi@ionicframework" href="https://ionicthemes.com/">IonicThemes Team</author>
     <content src="index.html" />
     <access origin="*" />
-    <gap:plugin name="phonegap-nfc" source="npm" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
     <allow-intent href="tel:*" />
