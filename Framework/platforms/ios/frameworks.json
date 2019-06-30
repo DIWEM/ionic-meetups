@@ -5,5 +5,7 @@
     "SystemConfiguration.framework": 1,
     "QuartzCore.framework": 1,
     "WebKit.framework": 1,
-    "libz.tbd": 1
+    "libz.tbd": 1,
+    "PassKit.framework": 1,
+    "CoreNFC.framework": 1
 }

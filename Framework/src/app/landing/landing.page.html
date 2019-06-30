@@ -1,20 +1,26 @@
-<ion-content class="tutorial-page">
+<ion-content class="tutorial-page" color="dark">
     <div padding-top text-end>
-      <ion-button fill="clear" [routerLink]="'/login/'" routerDirection="forward">Saltar<ion-icon name="arrow-forward"></ion-icon></ion-button>
+      <ion-button fill="clear" [routerLink]="'/login/'" routerDirection="forward" color="light">Saltar<ion-icon name="arrow-forward"></ion-icon></ion-button>
     </div>
+
+    <ion-button (click)="nfclick()">NFC</ion-button>
   
     <ion-slides pager="true">
       <ion-slide>
         <ion-grid>
           <ion-row>
               <ion-col>
-                  <img src="../../assets/icon/favicon.png" alt="">
+                  <br>
+                  <br>
+                  <br>
+                  <img src="../../assets/imgs/123.png" alt="">
               </ion-col>
           </ion-row>
           <ion-row>
               <ion-col>
-                  <h2>¿Quieres comer rico y saludable?</h2>
-                  <p>En eat&fit llevamos hasta tu domicilio u oficina, comida saludable, nutritiva, balanceada y sobre todo muy rica.</p>
+                  <h2>Bienvenido a un dos tres</h2>
+                  <p>La forma más fácil, rápida y segura de hacer tus pagos.</p>
+                  <br>
                   <br>
                   <br>
               </ion-col>
@@ -26,13 +32,15 @@
           <ion-grid>
               <ion-row>
                   <ion-col>
-                      <img src="../../assets/icon/favicon.png" alt="">
+                      <img src="../../assets/imgs/exchange.png" alt="">
                   </ion-col>
               </ion-row>
               <ion-row>
                   <ion-col>
-                      <h2>Titulo</h2>
-                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, distinctio facilis nesciunt iure id sed aspernatur aliquid quae laborum vero consequatur nam accusamus tenetur, necessitatibus maiores odit ipsam deserunt eos!</p>
+                      <h2>RECARGA CELULAR</h2>
+                      <p>Recarga tu celular de cualquier compañía en segundos, con sólo 3 clicks y desde donde quieras.</p>
+                      <br>
+                      <br>
                   </ion-col>
               </ion-row>
           </ion-grid>
@@ -43,45 +51,80 @@
               <ion-row>
                   <ion-col>
                     <div></div>
-                      <img src="../../assets/icon/favicon.png" alt="">
+                      <img src="../../assets/imgs/tickets.png" alt="">
                   </ion-col>
               </ion-row>
               <ion-row>
                   <ion-col>
-                          <h2>Titulo</h2>
-                          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique illum assumenda ab fuga voluptates, tempora autem quas temporibus repellat sunt harum voluptas cum dignissimos sint! Eius et ullam quo ratione.</p>
+                          <h2>BOLETOS DE CINE</h2>
+                          <p>Compra tus boletos de Cinépolis y Cinemex y ve a la función que desees en el cine de tu preferencia.</p>
                   </ion-col>
               </ion-row>
           </ion-grid>
       </ion-slide>
   
-                      <ion-slide>
+        <ion-slide>
                               <ion-grid>
                                   <ion-row>
                                       <ion-col>
-                                              <img src="../../assets/icon/favicon.png" alt="">
+                                              <img src="../../assets/imgs/car.png" alt="">
                                       </ion-col>
                                   </ion-row>
                                   <ion-row>
                                       <ion-col>
-                                              <h2>Titulo</h2>
-                                              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem voluptate tenetur error ut quidem unde non vitae harum animi doloremque id eaque sequi et repudiandae, illum ullam temporibus minus provident.</p>
+                                              <h2>RECARGA TAG</h2>
+                                              <p>Recarga tu TAG PASE, TeleVía y ViaPass en segundos, con sólo 3 clicks y desde donde quieras.</p>
                                       </ion-col>
                                   </ion-row>
                               </ion-grid>
                           </ion-slide>
+                          <ion-slide>
+                                <ion-grid>
+                                    <ion-row>
+                                        <ion-col>
+                                          <div></div>
+                                            <img src="../../assets/imgs/house.png" alt="">
+                                        </ion-col>
+                                    </ion-row>
+                                    <ion-row>
+                                        <ion-col>
+                                                <h2>PAGA TUS SERVICIOS</h2>
+                                                <p>Compra tus boletos de Cinépolis y Cinemex y ve a la función que desees en el cine de tu preferencia.</p>
+                                        </ion-col>
+                                    </ion-row>
+                                </ion-grid>
+                            </ion-slide>
+                            <ion-slide>
+                                    <ion-grid>
+                                        <ion-row>
+                                            <ion-col>
+                                              <div></div>
+                                                <img src="../../assets/imgs/nfc.png" alt="">
+                                            </ion-col>
+                                        </ion-row>
+                                        <ion-row>
+                                            <ion-col>
+                                                    <h2>Pago NFC</h2>
+                                                    <p>Paga rapido y seguro con tu celular.</p>
+                                                    <br>
+                                                    <br>
+                                                    <br>
+                                            </ion-col>
+                                        </ion-row>
+                                    </ion-grid>
+                            </ion-slide>
   
       <ion-slide>
           <ion-grid>
               <ion-row>
                   <ion-col>
-                      <img src="../../assets/icon/favicon.png" alt="">
+                      <img src="../../assets/imgs/credit-card.png" alt="">
                   </ion-col>
               </ion-row>
               <ion-row>
                   <ion-col>
-                      <h2>¿Estas listo?</h2>
-                      <ion-button expand="block" fill="clear" [routerLink]="'/meetup/'" routerDirection="forward">Comenzar</ion-button>
+                      <h2>¿Estas listo para comprar?</h2>
+                      <ion-button expand="block" fill="clear" [routerLink]="'/login/'" routerDirection="forward">Comenzar</ion-button>
                   </ion-col>
               </ion-row>
           </ion-grid>

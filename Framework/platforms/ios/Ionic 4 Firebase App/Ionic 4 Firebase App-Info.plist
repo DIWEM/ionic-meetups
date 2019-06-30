@@ -69,5 +69,7 @@
     <string>CDVLaunchScreen</string>
     <key>NSPhotoLibraryUsageDescription</key>
     <string/>
+    <key>NFCReaderUsageDescription</key>
+    <string>Read NFC Tags</string>
   </dict>
 </plist>

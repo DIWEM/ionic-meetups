@@ -70,6 +70,10 @@
 		E4B2824B6FFF469CA69D99C3 /* CDVSplashScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 270A6444C4214592AE51375F /* CDVSplashScreen.m */; };
 		2F56F7989CA04B5C8C82E8CA /* CDVViewController+SplashScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 45DD4D8071CF41FAB52BF1AA /* CDVViewController+SplashScreen.m */; };
 		C7ED2579762740B09405E23A /* CDVStatusBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D544325B65C422480E82B68 /* CDVStatusBar.m */; };
+		57B6F547AEAF4548A6EA310E /* CDVApplePay.m in Sources */ = {isa = PBXBuildFile; fileRef = 946AA2E14F6F465A8295A222 /* CDVApplePay.m */; };
+		2D2F1CC1A7214C72B853D223 /* PassKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B065AEB778F456EB1E46BE9 /* PassKit.framework */; };
+		5FC1BF69D4D64EAABCB1815B /* NfcPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 08B1E515E1F846A282261BEE /* NfcPlugin.m */; };
+		ED2340AA4C9443E8A76045FB /* CoreNFC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD4AAA8348B447EF8F6C3FD5 /* CoreNFC.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -198,6 +202,12 @@
 		3E8118AC75F146A28D0F5620 /* CDVViewController+SplashScreen.h */ = {isa = PBXFileReference; name = "CDVViewController+SplashScreen.h"; path = "cordova-plugin-splashscreen/CDVViewController+SplashScreen.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
 		6D544325B65C422480E82B68 /* CDVStatusBar.m */ = {isa = PBXFileReference; name = "CDVStatusBar.m"; path = "cordova-plugin-statusbar/CDVStatusBar.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
 		38C28185C928497FA27AF810 /* CDVStatusBar.h */ = {isa = PBXFileReference; name = "CDVStatusBar.h"; path = "cordova-plugin-statusbar/CDVStatusBar.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		946AA2E14F6F465A8295A222 /* CDVApplePay.m */ = {isa = PBXFileReference; name = "CDVApplePay.m"; path = "cordova-plugin-applepay/CDVApplePay.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		ACB7462F308443F68FDE5272 /* CDVApplePay.h */ = {isa = PBXFileReference; name = "CDVApplePay.h"; path = "cordova-plugin-applepay/CDVApplePay.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		2B065AEB778F456EB1E46BE9 /* PassKit.framework */ = {isa = PBXFileReference; name = "PassKit.framework"; path = "System/Library/Frameworks/PassKit.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		08B1E515E1F846A282261BEE /* NfcPlugin.m */ = {isa = PBXFileReference; name = "NfcPlugin.m"; path = "phonegap-nfc/NfcPlugin.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		FB22DF63602641C4BFF74D6A /* NfcPlugin.h */ = {isa = PBXFileReference; name = "NfcPlugin.h"; path = "phonegap-nfc/NfcPlugin.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		AD4AAA8348B447EF8F6C3FD5 /* CoreNFC.framework */ = {isa = PBXFileReference; name = "CoreNFC.framework"; path = "System/Library/Frameworks/CoreNFC.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -213,6 +223,8 @@
 				5C943C7368CF46DEBF4A327B /* QuartzCore.framework in Frameworks */,
 				6628B65F724F465DAFF0325F /* WebKit.framework in Frameworks */,
 				B728CFFA120E4BB68611BF31 /* libz.tbd in Frameworks */,
+				2D2F1CC1A7214C72B853D223 /* PassKit.framework in Frameworks */,
+				ED2340AA4C9443E8A76045FB /* CoreNFC.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,6 +317,8 @@
 				CF222F59FB0340E4B21871A8 /* QuartzCore.framework */,
 				E6E47AF8D7F64FB0B64900FB /* WebKit.framework */,
 				10729682202C416EAF1FDD40 /* libz.tbd */,
+				2B065AEB778F456EB1E46BE9 /* PassKit.framework */,
+				AD4AAA8348B447EF8F6C3FD5 /* CoreNFC.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -396,6 +410,10 @@
 				3E8118AC75F146A28D0F5620 /* CDVViewController+SplashScreen.h */,
 				6D544325B65C422480E82B68 /* CDVStatusBar.m */,
 				38C28185C928497FA27AF810 /* CDVStatusBar.h */,
+				946AA2E14F6F465A8295A222 /* CDVApplePay.m */,
+				ACB7462F308443F68FDE5272 /* CDVApplePay.h */,
+				08B1E515E1F846A282261BEE /* NfcPlugin.m */,
+				FB22DF63602641C4BFF74D6A /* NfcPlugin.h */,
 			);
 			name = Plugins;
 			path = "Ionic 4 Firebase App/Plugins";
@@ -555,6 +573,8 @@
 				E4B2824B6FFF469CA69D99C3 /* CDVSplashScreen.m in Sources */,
 				2F56F7989CA04B5C8C82E8CA /* CDVViewController+SplashScreen.m in Sources */,
 				C7ED2579762740B09405E23A /* CDVStatusBar.m in Sources */,
+				57B6F547AEAF4548A6EA310E /* CDVApplePay.m in Sources */,
+				5FC1BF69D4D64EAABCB1815B /* NfcPlugin.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

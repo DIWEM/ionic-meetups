@@ -24,6 +24,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 //Para Google Maps
 import { AgmCoreModule } from '@agm/core';
 
+//Para NFC
+import { NFC, Ndef } from '@ionic-native/nfc/ngx';
+
 @NgModule({
   declarations: [AppComponent],
   // declarations: [AppComponent, NewTaskModalPage],
@@ -50,7 +53,8 @@ import { AgmCoreModule } from '@agm/core';
     ImagePicker,
     WebView,
     { provide: FirestoreSettingsToken, useValue: {} },
-    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
+    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
+    NFC, Ndef
   ],
   bootstrap: [AppComponent]
 })
