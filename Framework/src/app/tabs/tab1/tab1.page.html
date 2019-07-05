@@ -104,15 +104,17 @@
           <div text-left *ngIf="createdCode">
             <a style="font-weight: bold; font-size: 32px; color:#616161;">${{ createdCode }}</a>
           </div>
+          <h4>Esperando NFC:</h4>
         </ion-col>
       </ion-row>
+      <ion-progress-bar type="indeterminate"></ion-progress-bar>
     </ion-card>
 
   
   </ion-content>
 
 <!-- Teclado de pago -->
-<ion-footer class="animated fadeInUp" color="light" mode="ios">
+<ion-footer>
     <ion-row>
       <ion-col size="4">
         <ion-button mode="ios" color="light" expand="block" (click)="oneButton()">1</ion-button>
@@ -142,7 +144,7 @@
         <ion-button mode="ios" color="light" expand="block" (click)="nineButton()">9</ion-button>
       </ion-col>
       <ion-col size="4">
-        <ion-button mode="ios" color="secondary" expand="block" (click)="scanCode()"><ion-icon name="barcode"></ion-icon></ion-button>
+        <ion-button mode="ios" color="secondary" expand="block" (click)="alertNFC()"><ion-icon name="wifi"></ion-icon></ion-button>
       </ion-col>
       <ion-col size="4">
         <ion-button mode="ios" color="light" expand="block" (click)="zeroButton()">0</ion-button>

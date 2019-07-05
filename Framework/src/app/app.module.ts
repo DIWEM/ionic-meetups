@@ -24,9 +24,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 //Para Google Maps
 import { AgmCoreModule } from '@agm/core';
 
-//Para NFC
-// import { NFC, Ndef } from '@ionic-native/nfc/ngx';
-
 //Para QR
 import { NgxQRCodeModule } from 'ngx-qrcode2';
 

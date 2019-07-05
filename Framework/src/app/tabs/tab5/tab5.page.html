@@ -1,4 +1,4 @@
-<ion-header>
+<!-- <ion-header>
   <ion-toolbar color="primary">
       <ion-buttons slot="start">
           <ion-menu-button></ion-menu-button>
@@ -51,4 +51,78 @@
       </div>
     </ion-col>
   </ion-row>
-</ion-content>
+</ion-content> -->
+
+
+
+<ion-header>
+    <ion-toolbar color="primary">
+      <ion-title>Perfil</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content class="card-background-page">
+  
+    <ion-card mode = "ios">
+      <img src="../../assets/card.png"/>
+      <div class="card-title">Cuenta Virtual</div>
+      <div class="card-subtitle">$2500.00 MX</div>
+  
+      <div class="button-two">
+        <ion-button strong  mode="ios" fill="outline" color="light" (click)="presentActionSheet()"><ion-icon name="md-arrow-round-down"></ion-icon>Deposito</ion-button>
+        <ion-button strong  mode="ios" fill="outline" color="light" (click)="alert()">Retiro<ion-icon name="md-arrow-round-up"></ion-icon></ion-button>
+      </div>
+    </ion-card>
+  
+    <h1 padding-start>VTickets</h1>
+  
+    <ion-card mode="ios">
+        <ion-grid>
+          <ion-row>
+            <ion-col size="3">
+              <ion-avatar>
+                <img src="../../assets/startbucks.jpg">
+              </ion-avatar>
+            </ion-col>
+            <ion-col size="5">
+              <div text-start>
+                <p style="font-weight: bold; font-size: 18px;">Starbucks</p>
+                <p style="font-size: 14px;">Perisur.</p>
+              </div>
+            </ion-col>
+            <ion-col size="4">
+              <div text-end>
+                <p style="font-weight: bold; font-size: 18px; color: red;">- $49.00</p>
+                <p style="font-size: 12px;">20/08/18</p>
+              </div>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+    </ion-card>
+  
+    <ion-card mode="ios">
+        <ion-grid>
+          <ion-row>
+            <ion-col size="3">
+              <ion-avatar>
+                <img src="../../assets/bbva.jpg">
+              </ion-avatar>
+            </ion-col>
+            <ion-col size="5">
+              <div text-start>
+                <p style="font-weight: bold; font-size: 18px;">BBVA VTicket</p>
+                <p style="font-size: 14px;">Artz.</p>
+              </div>
+            </ion-col>
+            <ion-col size="4">
+              <div text-end>
+                <p style="font-weight: bold; font-size: 18px;">$590.00</p>
+                <p style="font-size: 12px;">20/08/18</p>
+              </div>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+    </ion-card>
+  
+  </ion-content>
+  

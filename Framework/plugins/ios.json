@@ -7,27 +7,27 @@
     "files": {}
   },
   "installed_plugins": {
-    "cordova-plugin-telerik-imagepicker": {
-      "PHOTO_LIBRARY_USAGE_DESCRIPTION": " ",
-      "PACKAGE_NAME": "io.ionic.ionic4FirebaseCrud"
-    },
     "cordova-plugin-device": {
-      "PACKAGE_NAME": "io.ionic.ionic4FirebaseCrud"
+      "PACKAGE_NAME": "$(PRODUCT_BUNDLE_IDENTIFIER)"
     },
     "cordova-plugin-ionic-keyboard": {
-      "PACKAGE_NAME": "io.ionic.ionic4FirebaseCrud"
+      "PACKAGE_NAME": "$(PRODUCT_BUNDLE_IDENTIFIER)"
     },
     "cordova-plugin-ionic-webview": {
-      "PACKAGE_NAME": "io.ionic.ionic4FirebaseCrud"
+      "PACKAGE_NAME": "$(PRODUCT_BUNDLE_IDENTIFIER)"
     },
     "cordova-plugin-splashscreen": {
-      "PACKAGE_NAME": "io.ionic.ionic4FirebaseCrud"
+      "PACKAGE_NAME": "$(PRODUCT_BUNDLE_IDENTIFIER)"
     },
     "cordova-plugin-statusbar": {
-      "PACKAGE_NAME": "io.ionic.ionic4FirebaseCrud"
+      "PACKAGE_NAME": "$(PRODUCT_BUNDLE_IDENTIFIER)"
+    },
+    "cordova-plugin-telerik-imagepicker": {
+      "PHOTO_LIBRARY_USAGE_DESCRIPTION": " ",
+      "PACKAGE_NAME": "$(PRODUCT_BUNDLE_IDENTIFIER)"
     },
     "cordova-plugin-whitelist": {
-      "PACKAGE_NAME": "io.ionic.ionic4FirebaseCrud"
+      "PACKAGE_NAME": "$(PRODUCT_BUNDLE_IDENTIFIER)"
     }
   },
   "dependent_plugins": {}

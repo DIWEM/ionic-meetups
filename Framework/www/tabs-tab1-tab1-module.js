@@ -4084,7 +4084,7 @@ var Tab1PageModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<ion-header>\n  <ion-toolbar color=\"primary\">\n    <ion-buttons slot=\"start\">\n      <ion-menu-button></ion-menu-button>\n    </ion-buttons>\n    <ion-buttons slot=\"end\">\n      <ion-button [routerLink]=\"['/new-task']\">\n        <ion-icon slot=\"icon-only\" name=\"create\"></ion-icon>\n      </ion-button>\n    </ion-buttons>\n    <ion-title>Inicio</ion-title>\n  </ion-toolbar>\n</ion-header>\n\n<!-- <ion-content *ngIf=\"items\" class=\"list-mini-content\" no-padding>\n  <ion-row no-padding>\n    <ion-col size-xl=\"4\" offset-xl=\"4\" size-lg=\"6\" offset-lg=\"3\" size-md=\"10\" offset-md=\"1\" size-sm=\"12\" no-padding>\n      <div *ngIf=\"items.length > 0\" class=\"list-mini\" no-padding>\n          <ion-card *ngFor=\"let item of items\" no-padding>\n              <ion-item lines=\"none\">\n                  <ion-avatar slot=\"start\">\n                    <img src=\"../../../assets/imgs/perfil.jpg\">\n                  </ion-avatar>\n                  <ion-label>Mauricio Garduño</ion-label>\n                  <ion-note>11h ago</ion-note>\n                  <ion-button fill=\"clear\"><ion-icon name=\"more\"></ion-icon></ion-button>\n              </ion-item>\n              <img [src]=\"item.payload.doc.data().image\">\n              <ion-card-content>\n                  <p>{{item.payload.doc.data().description}}</p>\n                  <ion-col>\n                      <ion-button fill=\"clear\" size=\"small\" [routerLink]=\"['/details', item.payload.doc.id]\">...Ver más</ion-button>\n                  </ion-col>\n              </ion-card-content>\n              \n                <ion-row text-center>\n                  <ion-col>\n                    <ion-button fill=\"clear\" size=\"small\"><ion-icon name=\"thumbs-up\"></ion-icon>Me gusta</ion-button>\n                  </ion-col>\n                  <ion-col>\n                    <ion-button fill=\"clear\" size=\"small\"><ion-icon name=\"text\"></ion-icon>Comentar</ion-button>\n                  </ion-col>\n                  <ion-col>\n                      <ion-button fill=\"clear\" size=\"small\"><ion-icon name=\"ios-redo\"></ion-icon>Compartir</ion-button>\n                  </ion-col>\n                </ion-row>\n            </ion-card>\n      </div>\n      <div *ngIf=\"items.length == 0\" class=\"empty-list\">\n        No has publicado nada aún.\n      </div>\n    </ion-col>\n  </ion-row>\n</ion-content> -->\n\n<!-- <ion-content *ngIf=\"items\" class=\"list-mini-content\" no-padding>\n    <ion-refresher slot=\"fixed\" (ionRefresh)=\"doRefresh($event)\">\n        <ion-refresher-content\n          pullingIcon=\"arrow-dropdown\"\n          pullingText=\"Pull to refresh\"\n          refreshingSpinner=\"circles\"\n          refreshingText=\"Refreshing...\">\n        </ion-refresher-content>\n      </ion-refresher>\n  <div *ngIf=\"items.length > 0\" class=\"list-mini\">\n    <ion-card>\n      <ion-item *ngFor=\"let item of items\" [routerLink]=\"['/details', item.payload.doc.id]\" class=\"animated bounceInRight\">\n        <ion-thumbnail slot=\"start\">\n          <img [src]=\"item.payload.doc.data().image\">\n        </ion-thumbnail>\n        <ion-label>{{item.payload.doc.data().title}}</ion-label>\n        <ion-button fill=\"clear\" slot=\"end\">Detalles</ion-button>\n      </ion-item>\n    </ion-card>\n  </div>\n  <div *ngIf=\"items.length == 0\" class=\"empty-list\">\n    Ingresa un nuevo alimento.\n  </div>\n</ion-content> -->\n\n<ion-content>\n\n      <!-- <ngx-barcode [bc-value]=\"value\" [bc-display-value]=\"true\"></ngx-barcode>\n\n      <ngx-qrcode \n        [qrc-value] = \"qrData\"\n        qrc-class = \"aclass\"\n        qrc-errorCorrectionLevel = \"L\">\n      </ngx-qrcode> -->\n\n\n        <!-- QR de Págo -->\n  <!-- <qrcode [qrdata]=\"'Your QR code data string'\" [size]=\"256\" [level]=\"'M'\"></qrcode> -->\n  <ion-card class=\"animated zoomInDown\" mode=\"ios\">\n      <ion-row>\n        <ion-col size=\"6\">\n          <div text-center>\n            <ngx-qrcode [qrc-value]=\"qrCode\"></ngx-qrcode>\n            <!-- <qrcode [qrdata]=\"'Your QR code data string'\" [size]=\"256\" [level]=\"'M'\"></qrcode> -->\n          </div>\n        </ion-col>\n        <ion-col size=\"6\">\n          <h3>Págo De:</h3>\n          <div text-left *ngIf=\"createdCode\">\n            <a style=\"font-weight: bold; font-size: 32px; color:#616161;\">${{ createdCode }}</a>\n          </div>\n        </ion-col>\n      </ion-row>\n    </ion-card>\n\n  \n  </ion-content>\n\n<!-- Teclado de pago -->\n<ion-footer class=\"animated fadeInUp\" color=\"light\" mode=\"ios\">\n    <ion-row>\n      <ion-col size=\"4\">\n        <ion-button mode=\"ios\" color=\"light\" expand=\"block\" (click)=\"oneButton()\">1</ion-button>\n      </ion-col>\n      <ion-col size=\"4\">\n        <ion-button mode=\"ios\" color=\"light\" expand=\"block\" (click)=\"twoButton()\">2</ion-button>\n      </ion-col>\n      <ion-col size=\"4\">\n        <ion-button mode=\"ios\" color=\"light\" expand=\"block\" (click)=\"threeButton()\">3</ion-button>\n      </ion-col>\n      <ion-col size=\"4\">\n        <ion-button mode=\"ios\" color=\"light\" expand=\"block\" (click)=\"fourButton()\">4</ion-button>\n      </ion-col>\n      <ion-col size=\"4\">\n        <ion-button mode=\"ios\" color=\"light\" expand=\"block\" (click)=\"fiveButton()\">5</ion-button>\n      </ion-col>\n      <ion-col size=\"4\">\n        <ion-button mode=\"ios\" color=\"light\" expand=\"block\" (click)=\"sixButton()\">6</ion-button>\n      </ion-col>\n      <ion-col size=\"4\">\n        <ion-button mode=\"ios\" color=\"light\" expand=\"block\" (click)=\"sevenButton()\">7</ion-button>\n      </ion-col>\n      <ion-col size=\"4\">\n        <ion-button mode=\"ios\" color=\"light\" expand=\"block\" (click)=\"eightButton()\">8</ion-button>\n      </ion-col>\n      <ion-col size=\"4\">\n        <ion-button mode=\"ios\" color=\"light\" expand=\"block\" (click)=\"nineButton()\">9</ion-button>\n      </ion-col>\n      <ion-col size=\"4\">\n        <ion-button mode=\"ios\" color=\"secondary\" expand=\"block\" (click)=\"scanCode()\"><ion-icon name=\"barcode\"></ion-icon></ion-button>\n      </ion-col>\n      <ion-col size=\"4\">\n        <ion-button mode=\"ios\" color=\"light\" expand=\"block\" (click)=\"zeroButton()\">0</ion-button>\n      </ion-col>\n      <ion-col size=\"4\">\n        <ion-button mode=\"ios\" color=\"danger\" expand=\"block\" (click)=\"cleanButton()\"><ion-icon name=\"close\"></ion-icon></ion-button>\n      </ion-col>\n    </ion-row>\n    </ion-footer>\n    \n"
+module.exports = "<ion-header>\n  <ion-toolbar color=\"primary\">\n    <ion-buttons slot=\"start\">\n      <ion-menu-button></ion-menu-button>\n    </ion-buttons>\n    <ion-buttons slot=\"end\">\n      <ion-button [routerLink]=\"['/new-task']\">\n        <ion-icon slot=\"icon-only\" name=\"create\"></ion-icon>\n      </ion-button>\n    </ion-buttons>\n    <ion-title>Inicio</ion-title>\n  </ion-toolbar>\n</ion-header>\n\n<!-- <ion-content *ngIf=\"items\" class=\"list-mini-content\" no-padding>\n  <ion-row no-padding>\n    <ion-col size-xl=\"4\" offset-xl=\"4\" size-lg=\"6\" offset-lg=\"3\" size-md=\"10\" offset-md=\"1\" size-sm=\"12\" no-padding>\n      <div *ngIf=\"items.length > 0\" class=\"list-mini\" no-padding>\n          <ion-card *ngFor=\"let item of items\" no-padding>\n              <ion-item lines=\"none\">\n                  <ion-avatar slot=\"start\">\n                    <img src=\"../../../assets/imgs/perfil.jpg\">\n                  </ion-avatar>\n                  <ion-label>Mauricio Garduño</ion-label>\n                  <ion-note>11h ago</ion-note>\n                  <ion-button fill=\"clear\"><ion-icon name=\"more\"></ion-icon></ion-button>\n              </ion-item>\n              <img [src]=\"item.payload.doc.data().image\">\n              <ion-card-content>\n                  <p>{{item.payload.doc.data().description}}</p>\n                  <ion-col>\n                      <ion-button fill=\"clear\" size=\"small\" [routerLink]=\"['/details', item.payload.doc.id]\">...Ver más</ion-button>\n                  </ion-col>\n              </ion-card-content>\n              \n                <ion-row text-center>\n                  <ion-col>\n                    <ion-button fill=\"clear\" size=\"small\"><ion-icon name=\"thumbs-up\"></ion-icon>Me gusta</ion-button>\n                  </ion-col>\n                  <ion-col>\n                    <ion-button fill=\"clear\" size=\"small\"><ion-icon name=\"text\"></ion-icon>Comentar</ion-button>\n                  </ion-col>\n                  <ion-col>\n                      <ion-button fill=\"clear\" size=\"small\"><ion-icon name=\"ios-redo\"></ion-icon>Compartir</ion-button>\n                  </ion-col>\n                </ion-row>\n            </ion-card>\n      </div>\n      <div *ngIf=\"items.length == 0\" class=\"empty-list\">\n        No has publicado nada aún.\n      </div>\n    </ion-col>\n  </ion-row>\n</ion-content> -->\n\n<!-- <ion-content *ngIf=\"items\" class=\"list-mini-content\" no-padding>\n    <ion-refresher slot=\"fixed\" (ionRefresh)=\"doRefresh($event)\">\n        <ion-refresher-content\n          pullingIcon=\"arrow-dropdown\"\n          pullingText=\"Pull to refresh\"\n          refreshingSpinner=\"circles\"\n          refreshingText=\"Refreshing...\">\n        </ion-refresher-content>\n      </ion-refresher>\n  <div *ngIf=\"items.length > 0\" class=\"list-mini\">\n    <ion-card>\n      <ion-item *ngFor=\"let item of items\" [routerLink]=\"['/details', item.payload.doc.id]\" class=\"animated bounceInRight\">\n        <ion-thumbnail slot=\"start\">\n          <img [src]=\"item.payload.doc.data().image\">\n        </ion-thumbnail>\n        <ion-label>{{item.payload.doc.data().title}}</ion-label>\n        <ion-button fill=\"clear\" slot=\"end\">Detalles</ion-button>\n      </ion-item>\n    </ion-card>\n  </div>\n  <div *ngIf=\"items.length == 0\" class=\"empty-list\">\n    Ingresa un nuevo alimento.\n  </div>\n</ion-content> -->\n\n<ion-content>\n\n      <!-- <ngx-barcode [bc-value]=\"value\" [bc-display-value]=\"true\"></ngx-barcode>\n\n      <ngx-qrcode \n        [qrc-value] = \"qrData\"\n        qrc-class = \"aclass\"\n        qrc-errorCorrectionLevel = \"L\">\n      </ngx-qrcode> -->\n\n\n        <!-- QR de Págo -->\n  <!-- <qrcode [qrdata]=\"'Your QR code data string'\" [size]=\"256\" [level]=\"'M'\"></qrcode> -->\n  <ion-card class=\"animated zoomInDown\" mode=\"ios\">\n      <ion-row>\n        <ion-col size=\"6\">\n          <div text-center>\n            <ngx-qrcode [qrc-value]=\"qrCode\"></ngx-qrcode>\n            <!-- <qrcode [qrdata]=\"'Your QR code data string'\" [size]=\"256\" [level]=\"'M'\"></qrcode> -->\n          </div>\n        </ion-col>\n        <ion-col size=\"6\">\n          <h3>Págo De:</h3>\n          <div text-left *ngIf=\"createdCode\">\n            <a style=\"font-weight: bold; font-size: 32px; color:#616161;\">${{ createdCode }}</a>\n          </div>\n          <h4>Esperando NFC:</h4>\n        </ion-col>\n      </ion-row>\n      <ion-progress-bar type=\"indeterminate\"></ion-progress-bar>\n    </ion-card>\n\n  \n  </ion-content>\n\n<!-- Teclado de pago -->\n<ion-footer>\n    <ion-row>\n      <ion-col size=\"4\">\n        <ion-button mode=\"ios\" color=\"light\" expand=\"block\" (click)=\"oneButton()\">1</ion-button>\n      </ion-col>\n      <ion-col size=\"4\">\n        <ion-button mode=\"ios\" color=\"light\" expand=\"block\" (click)=\"twoButton()\">2</ion-button>\n      </ion-col>\n      <ion-col size=\"4\">\n        <ion-button mode=\"ios\" color=\"light\" expand=\"block\" (click)=\"threeButton()\">3</ion-button>\n      </ion-col>\n      <ion-col size=\"4\">\n        <ion-button mode=\"ios\" color=\"light\" expand=\"block\" (click)=\"fourButton()\">4</ion-button>\n      </ion-col>\n      <ion-col size=\"4\">\n        <ion-button mode=\"ios\" color=\"light\" expand=\"block\" (click)=\"fiveButton()\">5</ion-button>\n      </ion-col>\n      <ion-col size=\"4\">\n        <ion-button mode=\"ios\" color=\"light\" expand=\"block\" (click)=\"sixButton()\">6</ion-button>\n      </ion-col>\n      <ion-col size=\"4\">\n        <ion-button mode=\"ios\" color=\"light\" expand=\"block\" (click)=\"sevenButton()\">7</ion-button>\n      </ion-col>\n      <ion-col size=\"4\">\n        <ion-button mode=\"ios\" color=\"light\" expand=\"block\" (click)=\"eightButton()\">8</ion-button>\n      </ion-col>\n      <ion-col size=\"4\">\n        <ion-button mode=\"ios\" color=\"light\" expand=\"block\" (click)=\"nineButton()\">9</ion-button>\n      </ion-col>\n      <ion-col size=\"4\">\n        <ion-button mode=\"ios\" color=\"secondary\" expand=\"block\" (click)=\"alertNFC()\"><ion-icon name=\"wifi\"></ion-icon></ion-button>\n      </ion-col>\n      <ion-col size=\"4\">\n        <ion-button mode=\"ios\" color=\"light\" expand=\"block\" (click)=\"zeroButton()\">0</ion-button>\n      </ion-col>\n      <ion-col size=\"4\">\n        <ion-button mode=\"ios\" color=\"danger\" expand=\"block\" (click)=\"cleanButton()\"><ion-icon name=\"close\"></ion-icon></ion-button>\n      </ion-col>\n    </ion-row>\n    </ion-footer>\n    \n"
 
 /***/ }),
 
@@ -4161,12 +4161,16 @@ var __generator = (undefined && undefined.__generator) || function (thisArg, bod
 
 
 
+
+
 var Tab1Page = /** @class */ (function () {
-    function Tab1Page(loadingCtrl, authService, router, route) {
+    function Tab1Page(loadingCtrl, authService, router, route, alertController, actionSheetController) {
         this.loadingCtrl = loadingCtrl;
         this.authService = authService;
         this.router = router;
         this.route = route;
+        this.alertController = alertController;
+        this.actionSheetController = actionSheetController;
         this.qrData = "0"; //Para integrar al createdCode
         this.createdCode = "0"; //Crea el QR
         //Variables JSON QR
@@ -4249,6 +4253,96 @@ var Tab1Page = /** @class */ (function () {
             _this.router.navigate(["/login"]);
         }, function (err) {
             console.log(err);
+        });
+    };
+    //Alert
+    Tab1Page.prototype.alertNFC = function () {
+        return __awaiter(this, void 0, void 0, function () {
+            var alert;
+            var _this = this;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.alertController.create({
+                            header: 'Alert',
+                            subHeader: 'Activación',
+                            message: 'Deseas Activar NFC.',
+                            buttons: [
+                                {
+                                    text: 'Cancel',
+                                    role: 'cancel',
+                                    cssClass: 'secondary',
+                                    handler: function (blah) {
+                                        console.log('Confirm Cancel: blah');
+                                    }
+                                }, {
+                                    text: 'Okay',
+                                    handler: function () {
+                                        console.log('Confirm Okay');
+                                        _this.presentActionSheet();
+                                    }
+                                }
+                            ]
+                        })];
+                    case 1:
+                        alert = _a.sent();
+                        return [4 /*yield*/, alert.present()];
+                    case 2:
+                        _a.sent();
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    //Back
+    Tab1Page.prototype.presentActionSheet = function () {
+        return __awaiter(this, void 0, void 0, function () {
+            var actionSheet;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.actionSheetController.create({
+                            header: 'Listo para Escanear NFC',
+                            buttons: [{
+                                    text: 'Delete',
+                                    role: 'destructive',
+                                    icon: 'trash',
+                                    handler: function () {
+                                        console.log('Delete clicked');
+                                    }
+                                }, {
+                                    text: 'Share',
+                                    icon: 'share',
+                                    handler: function () {
+                                        console.log('Share clicked');
+                                    }
+                                }, {
+                                    text: 'Play (open modal)',
+                                    icon: 'arrow-dropright-circle',
+                                    handler: function () {
+                                        console.log('Play clicked');
+                                    }
+                                }, {
+                                    text: 'Favorite',
+                                    icon: 'heart',
+                                    handler: function () {
+                                        console.log('Favorite clicked');
+                                    }
+                                }, {
+                                    text: 'Cancel',
+                                    icon: 'close',
+                                    role: 'cancel',
+                                    handler: function () {
+                                        console.log('Cancel clicked');
+                                    }
+                                }]
+                        })];
+                    case 1:
+                        actionSheet = _a.sent();
+                        return [4 /*yield*/, actionSheet.present()];
+                    case 2:
+                        _a.sent();
+                        return [2 /*return*/];
+                }
+            });
         });
     };
     //
@@ -4454,7 +4548,9 @@ var Tab1Page = /** @class */ (function () {
         __metadata("design:paramtypes", [_ionic_angular__WEBPACK_IMPORTED_MODULE_2__["LoadingController"],
             _services_auth_service__WEBPACK_IMPORTED_MODULE_1__["AuthService"],
             _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"],
-            _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"]])
+            _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"],
+            _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["AlertController"],
+            _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["ActionSheetController"]])
     ], Tab1Page);
     return Tab1Page;
 }());

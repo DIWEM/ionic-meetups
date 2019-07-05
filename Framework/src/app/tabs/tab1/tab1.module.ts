@@ -9,8 +9,6 @@ import { Tab1Page } from './tab1.page';
 
 import { HomeResolver } from './tab1.resolver';
 
-// Import ngx-barcode module
-import { NgxBarcodeModule } from 'ngx-barcode';
 import { NgxQRCodeModule } from 'ngx-qrcode2';
 
 const routes: Routes = [
@@ -30,7 +28,6 @@ const routes: Routes = [
     ReactiveFormsModule,
     IonicModule,
     RouterModule.forChild(routes),
-    NgxBarcodeModule,
     NgxQRCodeModule
   ],
   declarations: [Tab1Page],

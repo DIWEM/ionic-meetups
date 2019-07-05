@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../../services/auth.service';
 import { LoadingController } from '@ionic/angular';
 import { Router, ActivatedRoute } from '@angular/router';
+import { AlertController } from '@ionic/angular';
+import { ActionSheetController } from '@ionic/angular';
 
 
 @Component({
@@ -57,7 +59,9 @@ export class Tab1Page implements OnInit {
     public loadingCtrl: LoadingController,
     private authService: AuthService,
     private router: Router,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    public alertController: AlertController,
+    public actionSheetController: ActionSheetController
   ) { }
 
   ngOnInit() {
@@ -95,6 +99,75 @@ export class Tab1Page implements OnInit {
     }, err => {
       console.log(err);
     })
+  }
+
+  //Alert
+  async alertNFC(){
+    const alert = await this.alertController.create({
+      header: 'Alert',
+      subHeader: 'Activación',
+      message: 'Deseas Activar NFC.',
+      buttons: [
+        {
+          text: 'Cancel',
+          role: 'cancel',
+          cssClass: 'secondary',
+          handler: (blah) => {
+            console.log('Confirm Cancel: blah');
+          }
+        }, {
+          text: 'Okay',
+          handler: () => {
+            console.log('Confirm Okay');
+            this.presentActionSheet();
+          }
+        }
+      ]
+    });
+
+    await alert.present();
+  }
+
+
+  //Back
+  async presentActionSheet() {
+    const actionSheet = await this.actionSheetController.create({
+      header: 'Listo para Escanear NFC',
+      buttons: [{
+        text: 'Delete',
+        role: 'destructive',
+        icon: 'trash',
+        handler: () => {
+          console.log('Delete clicked');
+        }
+      }, {
+        text: 'Share',
+        icon: 'share',
+        handler: () => {
+          console.log('Share clicked');
+        }
+      }, {
+        text: 'Play (open modal)',
+        icon: 'arrow-dropright-circle',
+        handler: () => {
+          console.log('Play clicked');
+        }
+      }, {
+        text: 'Favorite',
+        icon: 'heart',
+        handler: () => {
+          console.log('Favorite clicked');
+        }
+      }, {
+        text: 'Cancel',
+        icon: 'close',
+        role: 'cancel',
+        handler: () => {
+          console.log('Cancel clicked');
+        }
+      }]
+    });
+    await actionSheet.present();
   }
 
 
